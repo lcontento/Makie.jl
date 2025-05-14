@@ -22,7 +22,7 @@ By default each label is rotated parallel to the line between the bracket points
 The plot type alias for the `bracket` function is `Bracket`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L573" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L573" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -30,7 +30,7 @@ The plot type alias for the `bracket` function is `Bracket`.
 ## Examples {#Examples}
 
 #### Scalar arguments {#Scalar-arguments}
-<a id="example-d17f911" />
+<a id="example-2d567d5" />
 
 
 ```julia
@@ -52,11 +52,11 @@ bracket!(Point(5.5, sin(5.5)), Point(7.0, sin(7.0)),
 f
 ```
 
-<img src="./d17f911.png" width="600px" height="450px"/>
+<img src="./2d567d5.png" width="600px" height="450px"/>
 
 
 #### Vector arguments {#Vector-arguments}
-<a id="example-d2af3c9" />
+<a id="example-33af3fe" />
 
 
 ```julia
@@ -86,11 +86,11 @@ bracket!(ax,
 f
 ```
 
-<img src="./d2af3c9.png" width="600px" height="450px"/>
+<img src="./33af3fe.png" width="600px" height="450px"/>
 
 
 #### Styles {#Styles}
-<a id="example-2b74968" />
+<a id="example-874928d" />
 
 
 ```julia
@@ -104,7 +104,7 @@ bracket!(ax, 2, 1, 4, 1, text = "Square", style = :square)
 f
 ```
 
-<img src="./2b74968.png" width="600px" height="450px"/>
+<img src="./874928d.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

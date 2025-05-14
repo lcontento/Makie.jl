@@ -19,13 +19,13 @@ The conversion trait of `stem` is `PointBased`.
 The plot type alias for the `stem` function is `Stem`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L606" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L606" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-85137e4" />
+<a id="example-eb72ec9" />
 
 
 ```julia
@@ -40,9 +40,9 @@ stem!(xs, sin.(xs))
 f
 ```
 
-<img src="./85137e4.png" width="600px" height="450px"/>
+<img src="./eb72ec9.png" width="600px" height="450px"/>
 
-<a id="example-b79830c" />
+<a id="example-1362fb1" />
 
 
 ```julia
@@ -61,9 +61,9 @@ stem!(xs, sin,
 f
 ```
 
-<img src="./b79830c.png" width="600px" height="450px"/>
+<img src="./1362fb1.png" width="600px" height="450px"/>
 
-<a id="example-d970c1b" />
+<a id="example-3527620" />
 
 
 ```julia
@@ -81,9 +81,9 @@ stem!(xs, sin.(xs),
 f
 ```
 
-<img src="./d970c1b.png" width="600px" height="450px"/>
+<img src="./3527620.png" width="600px" height="450px"/>
 
-<a id="example-3c2ed0f" />
+<a id="example-97f9196" />
 
 
 ```julia
@@ -99,7 +99,7 @@ stem(f[1, 1], 0.5xs, 2 .* sin.(xs), 2 .* cos.(xs),
 f
 ```
 
-<img src="./3c2ed0f.png" width="600px" height="450px"/>
+<img src="./97f9196.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

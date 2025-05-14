@@ -19,11 +19,11 @@ Plots a filled contour of the height information in `zs` at horizontal grid posi
 The plot type alias for the `contourf` function is `Contourf`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L595" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L595" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
-<a id="example-7f1a4ef" />
+<a id="example-e01975a" />
 
 
 ```julia
@@ -43,9 +43,9 @@ Colorbar(f[1, 2], co)
 f
 ```
 
-<img src="./7f1a4ef.png" width="600px" height="450px"/>
+<img src="./e01975a.png" width="600px" height="450px"/>
 
-<a id="example-37e91ec" />
+<a id="example-93be801" />
 
 
 ```julia
@@ -69,9 +69,9 @@ Colorbar(f[1, 2], co)
 f
 ```
 
-<img src="./37e91ec.png" width="600px" height="450px"/>
+<img src="./93be801.png" width="600px" height="450px"/>
 
-<a id="example-5f2e330" />
+<a id="example-b5aebe9" />
 
 
 ```julia
@@ -95,13 +95,13 @@ Colorbar(f[1, 2], co)
 f
 ```
 
-<img src="./5f2e330.png" width="600px" height="450px"/>
+<img src="./b5aebe9.png" width="600px" height="450px"/>
 
 
 #### Relative mode {#Relative-mode}
 
 Sometimes it&#39;s beneficial to drop one part of the range of values, usually towards the outer boundary. Rather than specifying the levels to include manually, you can set the `mode` attribute to `:relative` and specify the levels from 0 to 1, relative to the current minimum and maximum value.
-<a id="example-2391833" />
+<a id="example-7f67468" />
 
 
 ```julia
@@ -122,7 +122,7 @@ contourf!(volcano, levels = 10)
 f
 ```
 
-<img src="./2391833.png" width="800px" height="400px"/>
+<img src="./7f67468.png" width="800px" height="400px"/>
 
 
 ### Curvilinear grids {#Curvilinear-grids}
@@ -130,7 +130,7 @@ f
 `contourf` also supports _curvilinear_ grids, where `x` and `y` are both matrices of the same size as `z`. This is similar to the input that [`surface`](/reference/plots/surface#surface) accepts.
 
 Let&#39;s warp a regular grid of `x` and `y` by some nonlinear function, and plot its contours:
-<a id="example-76474c9" />
+<a id="example-d745ac2" />
 
 
 ```julia
@@ -154,7 +154,7 @@ ctrf2 = contourf!(ax2, xs, ys, zs; levels = levels)
 f
 ```
 
-<img src="./76474c9.png" width="600px" height="450px"/>
+<img src="./d745ac2.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

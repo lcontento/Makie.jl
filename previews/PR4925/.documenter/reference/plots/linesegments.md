@@ -20,13 +20,13 @@ Plots a line for each pair of points in `(x, y, z)`, `(x, y)`, or `positions`.
 The plot type alias for the `linesegments` function is `LineSegments`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L595" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L595" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-4a0fd4a" />
+<a id="example-a32d985" />
 
 
 ```julia
@@ -44,7 +44,7 @@ linesegments!(xs, ys .- 2, linewidth = 5, color = LinRange(1, 5, length(xs)))
 f
 ```
 
-<img src="./4a0fd4a.png" width="600px" height="450px"/>
+<img src="./a32d985.png" width="600px" height="450px"/>
 
 
 ### Dealing with outline artifacts in GLMakie {#Dealing-with-outline-artifacts-in-GLMakie}
@@ -56,7 +56,7 @@ In GLMakie 3D line plots can generate outline artifacts depending on the order l
   
 - `overdraw = true` will disable depth testing entirely (read and write) for the plot, removing artifacts. This will however change the z-order of line segments and allow plots rendered later to show up on top of the linesegments plot.
   
-<a id="example-c0ff2f5" />
+<a id="example-1a34b97" />
 
 
 ```julia
@@ -75,7 +75,7 @@ linesegments(f[4, 2], ps, color = cs, overdraw = true)
 f
 ```
 
-<img src="./c0ff2f5.png" width="600px" height="650px"/>
+<img src="./1a34b97.png" width="600px" height="650px"/>
 
 
 ## Attributes {#Attributes}

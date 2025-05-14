@@ -41,7 +41,7 @@ This functionality can be disabled on a per-plot basis by setting `plot.inspecta
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/src/interaction/inspector.jl#L219-L245" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/src/interaction/inspector.jl#L219-L245" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

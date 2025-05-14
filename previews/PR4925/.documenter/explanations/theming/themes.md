@@ -19,7 +19,7 @@ There are also [Predefined themes](/explanations/theming/predefined_themes#Prede
 You can call `set_theme!(theme; kwargs...)` to change the current default theme to `theme` and override or add attributes given by `kwargs`. You can also reset your changes by calling `set_theme!()` without arguments.
 
 Let&#39;s create a plot with the default theme:
-<a id="example-ae846b4" />
+<a id="example-52464ce" />
 
 
 ```julia
@@ -37,11 +37,11 @@ end
 example_plot()
 ```
 
-<img src="./ae846b4.png" width="600px" height="450px"/>
+<img src="./52464ce.png" width="600px" height="450px"/>
 
 
 Now we define a theme which changes the default fontsize, activate it, and plot.
-<a id="example-d174d6c" />
+<a id="example-68e21c4" />
 
 
 ```julia
@@ -51,7 +51,7 @@ set_theme!(fontsize_theme)
 example_plot()
 ```
 
-<img src="./d174d6c.png" width="600px" height="450px"/>
+<img src="./68e21c4.png" width="600px" height="450px"/>
 
 
 This theme will be active until we call `set_theme!()`.
@@ -66,7 +66,7 @@ set_theme!()
 Themes often only affect part of the plot attributes. Therefore it is possible to combine themes to get their respective effects together.
 
 For example, you can combine the dark theme with the LaTeX fonts theme to have both the dark colors and uniform fonts.
-<a id="example-599bf78" />
+<a id="example-b0119ba" />
 
 
 ```julia
@@ -76,7 +76,7 @@ with_theme(dark_latexfonts) do
 end
 ```
 
-<img src="./599bf78.png" width="600px" height="450px"/>
+<img src="./b0119ba.png" width="600px" height="450px"/>
 
 
 ## update_theme! {#update_theme!}
@@ -84,7 +84,7 @@ end
 If you have activated a theme already and want to update it partially, without removing the attributes not in the new theme, you can use `update_theme!`.
 
 For example, you can decide to change the text size after activating the dark and latex theme in the previous section.
-<a id="example-2ab6472" />
+<a id="example-868a7f9" />
 
 
 ```julia
@@ -92,13 +92,13 @@ update_theme!(fontsize=30)
 example_plot()
 ```
 
-<img src="./2ab6472.png" width="600px" height="450px"/>
+<img src="./868a7f9.png" width="600px" height="450px"/>
 
 
 ## with_theme {#with_theme}
 
 Because it can be tedious to remember to switch themes off which you need only temporarily, there&#39;s the function `with_theme(f, theme)` which handles the resetting for you automatically, even if you encounter an error while running `f`.
-<a id="example-fbee837" />
+<a id="example-6783d57" />
 
 
 ```julia
@@ -107,11 +107,11 @@ with_theme(fontsize_theme) do
 end
 ```
 
-<img src="./fbee837.png" width="600px" height="450px"/>
+<img src="./6783d57.png" width="600px" height="450px"/>
 
 
 You can also pass additional keywords to add or override attributes in your theme:
-<a id="example-6723b9c" />
+<a id="example-c2f8bf9" />
 
 
 ```julia
@@ -120,13 +120,13 @@ with_theme(fontsize_theme, fontsize = 25) do
 end
 ```
 
-<img src="./6723b9c.png" width="600px" height="450px"/>
+<img src="./c2f8bf9.png" width="600px" height="450px"/>
 
 
 ## Theming plot objects {#Theming-plot-objects}
 
 You can theme plot objects by using their uppercase type names as a key in your theme.
-<a id="example-9ec1d44" />
+<a id="example-6056f9c" />
 
 
 ```julia
@@ -140,7 +140,7 @@ lines_theme = Theme(
 with_theme(example_plot, lines_theme)
 ```
 
-<img src="./9ec1d44.png" width="600px" height="450px"/>
+<img src="./6056f9c.png" width="600px" height="450px"/>
 
 
 ## Theming block objects {#Theming-block-objects}
@@ -148,7 +148,7 @@ with_theme(example_plot, lines_theme)
 Every Block such as `Axis`, `Legend`, `Colorbar`, etc. can be themed by using its type name as a key in your theme.
 
 Here is how you could define a simple ggplot-like style for your axes:
-<a id="example-3d0b043" />
+<a id="example-98e0349" />
 
 
 ```julia
@@ -167,7 +167,7 @@ ggplot_theme = Theme(
 with_theme(example_plot, ggplot_theme)
 ```
 
-<img src="./3d0b043.png" width="600px" height="450px"/>
+<img src="./98e0349.png" width="600px" height="450px"/>
 
 
 ## Cycles {#Cycles}
@@ -190,7 +190,7 @@ cycle = nothing # equivalent to cycle = []
 
 
 Notice that cycles must be given as attributes to a plot object, not the top-level theme (because different plot objects can cycle different attributes, e.g., a density plot cannot cycle markers). This is exemplified in the following code blocks.
-<a id="example-e39677d" />
+<a id="example-3a2b91d" />
 
 
 ```julia
@@ -208,7 +208,7 @@ with_theme(
 end
 ```
 
-<img src="./e39677d.png" width="600px" height="450px"/>
+<img src="./3a2b91d.png" width="600px" height="450px"/>
 
 
 ### Covarying cycles {#Covarying-cycles}
@@ -235,7 +235,7 @@ cycle = Cycle([:color, :marker], covary = true)
 
 
 For example
-<a id="example-6e59ff0" />
+<a id="example-ca2f1b9" />
 
 
 ```julia
@@ -253,7 +253,7 @@ with_theme(
 end
 ```
 
-<img src="./6e59ff0.png" width="600px" height="450px"/>
+<img src="./ca2f1b9.png" width="600px" height="450px"/>
 
 
 ### Manual cycling using `Cycled` {#Manual-cycling-using-Cycled}
@@ -261,7 +261,7 @@ end
 If you want to give a plot&#39;s attribute a specific value from the respective cycler, you can use the `Cycled` object. The index `i` passed to `Cycled` is used directly to look up a value in the cycler that belongs to the attribute, and errors if no such cycler is defined. For example, to access the third color in a cycler, instead of plotting three plots to advance the cycler, you can use `color = Cycled(3)`.
 
 The cycler&#39;s internal counter is not advanced when using `Cycled` for any attribute, and only attributes with `Cycled` access the cycled values, all other usually cycled attributes fall back to their non-cycled defaults.
-<a id="example-7e67840" />
+<a id="example-d4d2f3a" />
 
 
 ```julia
@@ -283,13 +283,13 @@ lines!(0..10, x -> sin(x) - 7, color = Cycled(1))
 f
 ```
 
-<img src="./7e67840.png" width="600px" height="450px"/>
+<img src="./d4d2f3a.png" width="600px" height="450px"/>
 
 
 ### Palettes {#Palettes}
 
 The attributes specified in the cycle are looked up in the axis&#39; palette. A single `:color` is both plot attribute as well as palette attribute, while `:color => :patchcolor` means that `plot.color` should be set to `palette.patchcolor`. Here&#39;s an example that shows how density plots react to different palette options:
-<a id="example-a46d848" />
+<a id="example-41b8d8c" />
 
 
 ```julia
@@ -323,7 +323,7 @@ end
 f
 ```
 
-<img src="./a46d848.png" width="800px" height="800px"/>
+<img src="./41b8d8c.png" width="800px" height="800px"/>
 
 
 You can also theme global palettes via `set_theme!(palette = (color = my_colors, marker = my_markers))` for example.

@@ -19,13 +19,13 @@ Plot the empirical cumulative distribution function (ECDF) of `values`.
 The plot type alias for the `ecdfplot` function is `ECDFPlot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L611" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L611" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-97e137f" />
+<a id="example-f3b6848" />
 
 
 ```julia
@@ -38,9 +38,9 @@ ecdfplot!(randn(200))
 f
 ```
 
-<img src="./97e137f.png" width="600px" height="450px"/>
+<img src="./f3b6848.png" width="600px" height="450px"/>
 
-<a id="example-bc585fa" />
+<a id="example-12dd707" />
 
 
 ```julia
@@ -55,9 +55,9 @@ ecdfplot!(x, color = :red, npoints=10)
 f
 ```
 
-<img src="./bc585fa.png" width="600px" height="450px"/>
+<img src="./12dd707.png" width="600px" height="450px"/>
 
-<a id="example-ac94d27" />
+<a id="example-855178a" />
 
 
 ```julia
@@ -73,7 +73,7 @@ ecdfplot!(x; weights = w, color=:orange)
 f
 ```
 
-<img src="./ac94d27.png" width="600px" height="450px"/>
+<img src="./855178a.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

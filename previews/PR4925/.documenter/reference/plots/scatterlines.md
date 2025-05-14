@@ -17,13 +17,13 @@ Plots `scatter` markers and `lines` between them.
 The plot type alias for the `scatterlines` function is `ScatterLines`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L607" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L607" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-7bba76f" />
+<a id="example-d7706c6" />
 
 
 ```julia
@@ -43,7 +43,7 @@ scatterlines!(xs, ys .- 3, marker = :cross, strokewidth = 1,
 f
 ```
 
-<img src="./7bba76f.png" width="600px" height="450px"/>
+<img src="./d7706c6.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

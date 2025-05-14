@@ -18,13 +18,13 @@ Plots a filled tricontour of the height information in `zs` at the horizontal po
 The plot type alias for the `tricontourf` function is `Tricontourf`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L603" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L603" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-55242d6" />
+<a id="example-b102b05" />
 
 
 ```julia
@@ -42,9 +42,9 @@ Colorbar(f[1, 2], tr)
 f
 ```
 
-<img src="./55242d6.png" width="600px" height="450px"/>
+<img src="./b102b05.png" width="600px" height="450px"/>
 
-<a id="example-da64115" />
+<a id="example-2baee29" />
 
 
 ```julia
@@ -62,13 +62,13 @@ Colorbar(f[1, 2], tr)
 f
 ```
 
-<img src="./da64115.png" width="600px" height="450px"/>
+<img src="./2baee29.png" width="600px" height="450px"/>
 
 
 #### Triangulation modes {#Triangulation-modes}
 
 Manual triangulations can be passed as a 3xN matrix of integers, where each column of three integers specifies the indices of the corners of one triangle in the vector of points.
-<a id="example-369c0eb" />
+<a id="example-9252120" />
 
 
 ```julia
@@ -97,11 +97,11 @@ scatter!(x, y, color = z, strokewidth = 1, strokecolor = :black)
 f
 ```
 
-<img src="./369c0eb.png" width="600px" height="450px"/>
+<img src="./9252120.png" width="600px" height="450px"/>
 
 
 By default, `tricontourf` performs unconstrained triangulations. Greater control over the triangulation, such as allowing for enforced boundaries, can be achieved by using [DelaunayTriangulation.jl](https://github.com/DanielVandH/DelaunayTriangulation.jl) and passing the resulting triangulation as the first argument of `tricontourf`. For example, the above annulus can also be plotted as follows:
-<a id="example-f9e66fc" />
+<a id="example-55b13ed" />
 
 
 ```julia
@@ -128,11 +128,11 @@ scatter!(x, y, color = z, strokewidth = 1, strokecolor = :black)
 f
 ```
 
-<img src="./f9e66fc.png" width="600px" height="450px"/>
+<img src="./55b13ed.png" width="600px" height="450px"/>
 
 
 Boundary nodes make it possible to support more complicated regions, possibly with holes, than is possible by only providing points themselves.
-<a id="example-99798da" />
+<a id="example-f5592c1" />
 
 
 ```julia
@@ -175,9 +175,9 @@ f, ax, _ = tricontourf(tri, z, levels = 30; axis = (; aspect = 1))
 f
 ```
 
-<img src="./99798da.png" width="600px" height="450px"/>
+<img src="./f5592c1.png" width="600px" height="450px"/>
 
-<a id="example-5bd5c00" />
+<a id="example-c22018b" />
 
 
 ```julia
@@ -202,13 +202,13 @@ f, ax, tr = tricontourf(tri, z, colormap = :matter)
 f
 ```
 
-<img src="./5bd5c00.png" width="600px" height="450px"/>
+<img src="./c22018b.png" width="600px" height="450px"/>
 
 
 #### Relative mode {#Relative-mode}
 
 Sometimes it&#39;s beneficial to drop one part of the range of values, usually towards the outer boundary. Rather than specifying the levels to include manually, you can set the `mode` attribute to `:relative` and specify the levels from 0 to 1, relative to the current minimum and maximum value.
-<a id="example-20d6431" />
+<a id="example-7c8c6db" />
 
 
 ```julia
@@ -226,7 +226,7 @@ Colorbar(f[1, 2], tr)
 f
 ```
 
-<img src="./20d6431.png" width="600px" height="450px"/>
+<img src="./7c8c6db.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

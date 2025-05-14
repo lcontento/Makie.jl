@@ -21,7 +21,7 @@ Generates and plots a Voronoi tessalation from `heatmap`- or point-like data. Th
 The plot type alias for the `voronoiplot` function is `Voronoiplot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L572" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L572" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -29,7 +29,7 @@ The plot type alias for the `voronoiplot` function is `Voronoiplot`.
 ## Examples {#Examples}
 
 A `voronoiplot` generates a cell for each passed position similar to `heatmap`, however the cells are not restricted to a rectangular shape. It can be called with point based (like `scatter` or `lines`) or `heatmap`-like inputs.
-<a id="example-b832e4b" />
+<a id="example-115dd85" />
 
 
 ```julia
@@ -47,11 +47,11 @@ voronoiplot!(ax, rand(10, 10), rand(10, 10), rand(10, 10))
 f
 ```
 
-<img src="./b832e4b.png" width="1200px" height="450px"/>
+<img src="./115dd85.png" width="1200px" height="450px"/>
 
 
 `voronoiplot` uses the Voronoi tessellation from [DelaunayTriangulation.jl](https://github.com/DanielVandH/DelaunayTriangulation.jl) to generate the cells. You can also do this yourself and directly plot the `VoronoiTessellation` object returned.
-<a id="example-20b2b81" />
+<a id="example-748810b" />
 
 
 ```julia
@@ -68,11 +68,11 @@ f, ax, tr = voronoiplot(vorn)
 f
 ```
 
-<img src="./20b2b81.png" width="600px" height="450px"/>
+<img src="./748810b.png" width="600px" height="450px"/>
 
 
 When considering standard tessellations the unbounded polygons are clipped at a bounding box determined automatically by default, or from a user-provided clipping shape (a rectangle or circle). The automatic bounding box is determined by the bounding box of generators of the tessellation, meaning the provided points, extended out by some factor `unbounded_edge_extension_factor` (default `0.1`) proportional to the lengths of the bounding box&#39;s sides.
-<a id="example-63f2641" />
+<a id="example-bd1d141" />
 
 
 ```julia
@@ -87,9 +87,9 @@ f, ax, tr = voronoiplot(real(z), imag(z), unbounded_edge_extension_factor = 0.4,
 f
 ```
 
-<img src="./63f2641.png" width="600px" height="450px"/>
+<img src="./bd1d141.png" width="600px" height="450px"/>
 
-<a id="example-c7ae15a" />
+<a id="example-262dc3f" />
 
 
 ```julia
@@ -107,11 +107,11 @@ f, ax, tr = voronoiplot(x, y, show_generators=false,
 f
 ```
 
-<img src="./c7ae15a.png" width="600px" height="450px"/>
+<img src="./262dc3f.png" width="600px" height="450px"/>
 
 
 For clipped and centroidal tessellations, there are no unbounded polygons.
-<a id="example-a85aa4b" />
+<a id="example-1833036" />
 
 
 ```julia
@@ -129,9 +129,9 @@ f, ax, tr = voronoiplot(vorn, show_generators = true, markersize = 13, marker = 
 f
 ```
 
-<img src="./a85aa4b.png" width="600px" height="450px"/>
+<img src="./1833036.png" width="600px" height="450px"/>
 
-<a id="example-97c5b33" />
+<a id="example-9c7164c" />
 
 
 ```julia
@@ -153,7 +153,7 @@ f, ax, tr = voronoiplot(smooth_vorn, show_generators=false)
 f
 ```
 
-<img src="./97c5b33.png" width="600px" height="450px"/>
+<img src="./9c7164c.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

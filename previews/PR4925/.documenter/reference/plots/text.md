@@ -19,7 +19,7 @@ Plots one or multiple texts passed via the `text` keyword. `Text` uses the `Poin
 The plot type alias for the `text` function is `Text`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -31,7 +31,7 @@ By default, text is drawn with `markerspace = :pixel`, which means that the text
 The boundingbox of text with `markerspace = :pixel` will include every data point or every text anchor point but not the text itself, because its extent depends on the current projection of the axis it is in. This also means that `autolimits!` might cut off your text, because the glyphs don&#39;t have a meaningful size in data coordinates (the size is independent of zoom level), and you have to take some care to manually place the text or set data limits such that it is fully visible.
 
 You can either plot one string with one position, or a vector of strings with a vector of positions.
-<a id="example-f325782" />
+<a id="example-4484e77" />
 
 
 ```julia
@@ -56,13 +56,13 @@ text!(
 f
 ```
 
-<img src="./f325782.png" width="600px" height="450px"/>
+<img src="./4484e77.png" width="600px" height="450px"/>
 
 
 ## Marker space data {#Marker-space-data}
 
 For text whose dimensions are meaningful in data space, set `markerspace = :data`. This means that the boundingbox of the text in data coordinates will include every glyph.
-<a id="example-8b80404" />
+<a id="example-e74876e" />
 
 
 ```julia
@@ -83,13 +83,13 @@ text!(
 f
 ```
 
-<img src="./8b80404.png" width="600px" height="450px"/>
+<img src="./e74876e.png" width="600px" height="450px"/>
 
 
 ## Alignment {#Alignment}
 
 Text can be aligned with the horizontal alignments `:left`, `:center`, `:right` and the vertical alignments `:bottom`, `:baseline`, `:center`, `:top`.
-<a id="example-974f721" />
+<a id="example-f307401" />
 
 
 ```julia
@@ -103,13 +103,13 @@ text!(x, y, text = string.(aligns), align = aligns)
 current_figure()
 ```
 
-<img src="./974f721.png" width="600px" height="450px"/>
+<img src="./f307401.png" width="600px" height="450px"/>
 
 
 ## Justification {#Justification}
 
 By default, justification of multiline text follows alignment. Text that is left aligned is also left justified. You can override this with the `justification` attribute.
-<a id="example-c260043" />
+<a id="example-1e2a862" />
 
 
 ```julia
@@ -147,13 +147,13 @@ end
 scene
 ```
 
-<img src="./c260043.png" width="800px" height="800px"/>
+<img src="./1e2a862.png" width="800px" height="800px"/>
 
 
 ## Offset {#Offset}
 
 The offset attribute can be used to shift text away from its position. This is especially useful with `space = :pixel`, for example to place text together with barplots. You can specify the end of the barplots in data coordinates, and then offset the text a little bit to the left.
-<a id="example-6252a74" />
+<a id="example-c8b2308" />
 
 
 ```julia
@@ -174,7 +174,7 @@ text!(Point.(horsepower, 1:5), text = cars, align = (:right, :center),
 f
 ```
 
-<img src="./6252a74.png" width="600px" height="450px"/>
+<img src="./c8b2308.png" width="600px" height="450px"/>
 
 
 ## Relative space {#Relative-space}
@@ -182,7 +182,7 @@ f
 The default setting of `text` is `space = :data`, which means the final position depends on the axis limits and scaling. However, it can be useful to place text relative to the axis itself, independent of scaling. With `space = :relative`, the position `(0, 0)` refers to the lower left corner and `(1, 1)` the upper right of the `Scene` that a plot object is in (for an `Axis` that is equivalent to the plotting area, which is implemented using a `Scene`).
 
 A common scenario is to place labels within axes:
-<a id="example-5b273f8" />
+<a id="example-b6f210b" />
 
 
 ```julia
@@ -208,13 +208,13 @@ end
 f
 ```
 
-<img src="./5b273f8.png" width="600px" height="450px"/>
+<img src="./b6f210b.png" width="600px" height="450px"/>
 
 
 ## MathTeX {#MathTeX}
 
 Makie can render LaTeX strings from the LaTeXStrings.jl package using [MathTeXEngine.jl](https://github.com/Kolaru/MathTeXEngine.jl/).
-<a id="example-7ea848e" />
+<a id="example-da5d86e" />
 
 
 ```julia
@@ -224,11 +224,11 @@ text!(7, 0.38, text = L"\frac{\sin(x)}{\sqrt{x}}", color = :black)
 current_figure()
 ```
 
-<img src="./7ea848e.png" width="600px" height="450px"/>
+<img src="./da5d86e.png" width="600px" height="450px"/>
 
 
 You can also pass L-strings to many objects that use text, for example as labels in the legend.
-<a id="example-90c013c" />
+<a id="example-ec8b4a4" />
 
 
 ```julia
@@ -246,7 +246,7 @@ Legend(f[1, 2], ax)
 f
 ```
 
-<img src="./90c013c.png" width="600px" height="450px"/>
+<img src="./ec8b4a4.png" width="600px" height="450px"/>
 
 
 ## Rich text {#Rich-text}
@@ -254,7 +254,7 @@ f
 With rich text, you can conveniently plot text whose parts have different colors or fonts, and you can position sections as subscripts and superscripts. You can create such rich text objects using the functions `rich`, `superscript`, `subscript`, `subsup` and `left_subsup`, all of which create `RichText` objects.
 
 Each of these functions takes a variable number of arguments (except `subsup` and `left_subsup` which take exactly two arguments), each of which can be a `String` or `RichText`. Each can also take keyword arguments such as `color` or `font`, to set these attributes for the given part. The top-level settings for font, color, etc. are taken from the `text` attributes as usual.
-<a id="example-9de8e37" />
+<a id="example-ef429b6" />
 
 
 ```julia
@@ -283,13 +283,13 @@ Label(f[3, 1], rich("Chemists use notations like ", left_subsup("92", "238"), "U
 f
 ```
 
-<img src="./9de8e37.png" width="600px" height="450px"/>
+<img src="./ef429b6.png" width="600px" height="450px"/>
 
 
 ### Tweaking offsets {#Tweaking-offsets}
 
 Sometimes, when using regular and italic fonts next to each other, the gaps between glyphs are too narrow or too wide. You can use the `offset` value for rich text to shift glyphs by an amount proportional to the fontsize.
-<a id="example-2cb28b5" />
+<a id="example-8867dc6" />
 
 
 ```julia
@@ -316,7 +316,7 @@ Label(
 f
 ```
 
-<img src="./2cb28b5.png" width="600px" height="450px"/>
+<img src="./8867dc6.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

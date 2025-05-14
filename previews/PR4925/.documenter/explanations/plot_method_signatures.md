@@ -28,7 +28,7 @@ Methods that create an `AxisPlot` accept a special-cased `axis` keyword, where y
 All other keyword arguments are passed as attributes to the plotting function.
 
 Here are two examples with the scatter function (take care to create single-argument NamedTuples correctly, for example with a trailing comma):
-<a id="example-847c316" />
+<a id="example-e2e5a41" />
 
 
 ```julia
@@ -47,7 +47,7 @@ lines(fig[2, 1], cumsum(randn(1000)),
 fig
 ```
 
-<img src="./847c316.png" width="1000px" height="600px"/>
+<img src="./e2e5a41.png" width="1000px" height="600px"/>
 
 
 ## Mutating {#Mutating}
@@ -72,7 +72,7 @@ For example, `fig[1, 2]` creates a `GridPosition` referring to row 1 and column 
 ### With Non-Mutating Plotting Functions {#With-Non-Mutating-Plotting-Functions}
 
 Using the non-mutating plotting functions with GridPositions creates new axes at the given locations. If a GridLayout along the nesting levels doesn&#39;t exist, yet, it is created automatically for convenience.
-<a id="example-688811b" />
+<a id="example-c19e253" />
 
 
 ```julia
@@ -100,13 +100,13 @@ fig[:, end+1] = Colorbar(fig, hm)
 fig
 ```
 
-<img src="./688811b.png" width="600px" height="450px"/>
+<img src="./c19e253.png" width="600px" height="450px"/>
 
 
 ### With Mutating Plotting Functions {#With-Mutating-Plotting-Functions}
 
 Mutating plotting functions work a bit differently with GridPositions. First, it is checked if one - and only one - axis exists already at the given position. If that&#39;s the case, that axis is plotted into. If it&#39;s not the case, the function will error.
-<a id="example-15c4b28" />
+<a id="example-69af988" />
 
 
 ```julia
@@ -135,5 +135,5 @@ lines!(ax, 1.0..10, cos, color = :yellow)
 fig
 ```
 
-<img src="./15c4b28.png" width="600px" height="450px"/>
+<img src="./69af988.png" width="600px" height="450px"/>
 

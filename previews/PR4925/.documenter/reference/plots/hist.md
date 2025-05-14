@@ -17,13 +17,13 @@ Plot a histogram of `values`.
 The plot type alias for the `hist` function is `Hist`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L591" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L591" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-45021ab" />
+<a id="example-63fa291" />
 
 
 ```julia
@@ -38,13 +38,13 @@ hist(f[2, 2], data, normalization = :pdf)
 f
 ```
 
-<img src="./45021ab.png" width="600px" height="450px"/>
+<img src="./63fa291.png" width="600px" height="450px"/>
 
 
 #### Histogram with labels {#Histogram-with-labels}
 
 You can use all the same arguments as [`barplot`](/reference/plots/barplot#barplot):
-<a id="example-b7d145a" />
+<a id="example-10f1369" />
 
 
 ```julia
@@ -56,13 +56,13 @@ hist(data, normalization = :pdf, bar_labels = :values,
      strokewidth = 0.5, strokecolor = (:black, 0.5), color = :values)
 ```
 
-<img src="./b7d145a.png" width="600px" height="450px"/>
+<img src="./10f1369.png" width="600px" height="450px"/>
 
 
 #### Moving histograms {#Moving-histograms}
 
 With `scale_to`, and `offset`, one can put multiple histograms into the same plot. Note, that offset automatically sets fillto, to move the whole barplot. Also, one can use a negative `scale_to` amount to flip the histogram, or `scale_to=:flip` to flip the direction of the bars without changing their height.
-<a id="example-1fb6242" />
+<a id="example-78eb54b" />
 
 
 ```julia
@@ -75,11 +75,11 @@ end
 fig
 ```
 
-<img src="./1fb6242.png" width="600px" height="450px"/>
+<img src="./78eb54b.png" width="600px" height="450px"/>
 
 
 #### Using statistical weights {#Using-statistical-weights}
-<a id="example-ca829f3" />
+<a id="example-23a29c8" />
 
 
 ```julia
@@ -99,7 +99,7 @@ hist(fig[1,2], x, weights = w)
 fig
 ```
 
-<img src="./ca829f3.png" width="600px" height="450px"/>
+<img src="./23a29c8.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

@@ -48,7 +48,7 @@ sl = f[2, 1] = Slider(f)
 ## GridPositions and GridSubpositions {#GridPositions-and-GridSubpositions}
 
 The indexing syntax of `Figure` is implemented to work seamlessly with layouting. If you index into the figure, a `GridPosition` object that stores this indexing operation is created. This object can be used to plot a new axis into a certain layout position in the figure, for example like this:
-<a id="example-e3abd41" />
+<a id="example-3cc4bd9" />
 
 
 ```julia
@@ -66,11 +66,11 @@ heatmap(f[1, 3], randn(10, 10))
 f
 ```
 
-<img src="./e3abd41.png" width="600px" height="450px"/>
+<img src="./3cc4bd9.png" width="600px" height="450px"/>
 
 
 You can also index further into a `GridPosition`, which creates a `GridSubposition`. With `GridSubposition`s you can describe positions in arbitrarily nested grid layouts. Often, a desired plot layout can only be achieved with nesting, and repeatedly indexing makes this easy.
-<a id="example-b7f740c" />
+<a id="example-be23118" />
 
 
 ```julia
@@ -86,7 +86,7 @@ heatmap(f[1, 2][2, 1], randn(20, 20))
 f
 ```
 
-<img src="./b7f740c.png" width="600px" height="450px"/>
+<img src="./be23118.png" width="600px" height="450px"/>
 
 
 All nested GridLayouts that don&#39;t exist yet, but are needed for a nested plotting call, are created in the background automatically.
@@ -100,7 +100,7 @@ The `GridLayout`s that are implicitly created when using `GridSubpositions` are 
 ## Figure padding {#Figure-padding}
 
 You can change the amount of whitespace (margin) around the figure content with the keyword `figure_padding`. This takes either a number for all four sides, or a tuple of four numbers for left, right, bottom, top. You can also theme this setting with `set_theme!(figure_padding = 30)`, for example.
-<a id="example-363d208" />
+<a id="example-8f7c775" />
 
 
 ```julia
@@ -113,7 +113,7 @@ scatter!(1:10)
 f
 ```
 
-<img src="./363d208.png" width="600px" height="450px"/>
+<img src="./8f7c775.png" width="600px" height="450px"/>
 
 
 ## Retrieving Objects From A Figure {#Retrieving-Objects-From-A-Figure}

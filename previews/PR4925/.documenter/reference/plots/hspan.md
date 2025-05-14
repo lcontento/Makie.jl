@@ -18,11 +18,11 @@ Create horizontal bands spanning across a `Scene` with 2D projection. The bands 
 The plot type alias for the `hspan` function is `HSpan`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
-<a id="example-7ef0b68" />
+<a id="example-d8109de" />
 
 
 ```julia
@@ -30,7 +30,7 @@ using CairoMakie
 hspan([0, 1, 2], [0.5, 1.2, 2.1])
 ```
 
-<img src="./7ef0b68.png" width="600px" height="450px"/>
+<img src="./d8109de.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

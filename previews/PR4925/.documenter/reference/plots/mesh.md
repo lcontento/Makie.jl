@@ -20,7 +20,7 @@ Plots a 3D or 2D mesh. Supported `mesh_object`s include `Mesh` types from [Geome
 The plot type alias for the `mesh` function is `Mesh`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L612" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L612" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -30,7 +30,7 @@ The plot type alias for the `mesh` function is `Mesh`.
 ### Simple mesh plots {#Simple-mesh-plots}
 
 A mesh can be constructed from a set of vertex coordinates and faces.
-<a id="example-f9ff1ce" />
+<a id="example-733ffaf" />
 
 
 ```julia
@@ -52,11 +52,11 @@ colors = [:red, :green, :blue, :orange]
 mesh(vertices, faces, color = colors, shading = NoShading)
 ```
 
-<img src="./f9ff1ce.png" width="600px" height="450px"/>
+<img src="./733ffaf.png" width="600px" height="450px"/>
 
 
 Note that the order of vertices within a face matters for normal generation in 3D and thus affects shading. The normals follows the right hand rule, meaning the normals will face outwards if the vertices of a face are in a counter clockwise order.
-<a id="example-8acf7e4" />
+<a id="example-e405fe8" />
 
 
 ```julia
@@ -92,11 +92,11 @@ f
 └ @ Makie ~/work/Makie.jl/Makie.jl/src/basic_recipes/arrows.jl:204
 ```
 
-<img src="./8acf7e4.png" width="800px" height="400px"/>
+<img src="./e405fe8.png" width="800px" height="400px"/>
 
 
 Another quick way to create a mesh plot is import a mesh using FileIO (which relies on MeshIO):
-<a id="example-20ace3d" />
+<a id="example-79ccfc8" />
 
 
 ```julia
@@ -112,11 +112,11 @@ mesh(
 )
 ```
 
-<img src="./20ace3d.png" width="600px" height="450px"/>
+<img src="./79ccfc8.png" width="600px" height="450px"/>
 
 
 ### Face colors and normals {#Face-colors-and-normals}
-<a id="example-2a7ec06" />
+<a id="example-83b3890" />
 
 
 ```julia
@@ -143,7 +143,7 @@ m = GeometryBasics.mesh(ps, fs, normal = ns, color = cs)
 mesh(m)
 ```
 
-<img src="./2a7ec06.png" width="600px" height="450px"/>
+<img src="./83b3890.png" width="600px" height="450px"/>
 
 
 ### Using GeometryBasics.Mesh and Buffer/Sampler type {#Using-GeometryBasics.Mesh-and-Buffer/Sampler-type}
@@ -297,7 +297,7 @@ f
 ![](hhcoasz.jpeg)
 
 ### Complex Meshes (Experimental) {#Complex-Meshes-Experimental}
-<a id="example-c126825" />
+<a id="example-24c706d" />
 
 
 ```julia
@@ -323,7 +323,7 @@ cameracontrols(a).settings.fixed_axis[] = false # rotate freely
 f
 ```
 
-<img src="./c126825.png" width="600px" height="450px"/>
+<img src="./24c706d.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

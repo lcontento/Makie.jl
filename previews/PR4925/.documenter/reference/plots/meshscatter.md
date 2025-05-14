@@ -19,13 +19,13 @@ Plots a mesh for each element in `(x, y, z)`, `(x, y)`, or `positions` (similar 
 The plot type alias for the `meshscatter` function is `MeshScatter`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L615" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L615" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-38d44ee" />
+<a id="example-920cd49" />
 
 
 ```julia
@@ -37,9 +37,9 @@ zs = LinRange(0, 3, length(xs))
 meshscatter(xs, ys, zs, markersize = 0.1, color = zs)
 ```
 
-<img src="./38d44ee.png" width="600px" height="450px"/>
+<img src="./920cd49.png" width="600px" height="450px"/>
 
-<a id="example-89399b6" />
+<a id="example-e25a2a8" />
 
 
 ```julia
@@ -70,7 +70,7 @@ ylims!(a, 0.4, N+0.6)
 f
 ```
 
-<img src="./89399b6.png" width="500px" height="400px"/>
+<img src="./e25a2a8.png" width="500px" height="400px"/>
 
 
 ## Attributes {#Attributes}

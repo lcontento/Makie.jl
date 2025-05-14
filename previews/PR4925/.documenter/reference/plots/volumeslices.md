@@ -17,13 +17,13 @@ Draws heatmap slices of the volume v
 The plot type alias for the `volumeslices` function is `VolumeSlices`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L585" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L585" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-5029dc6" />
+<a id="example-aea96c7" />
 
 
 ```julia
@@ -72,7 +72,7 @@ end
 fig
 ```
 
-<img src="./5029dc6.png" width="600px" height="450px"/>
+<img src="./aea96c7.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

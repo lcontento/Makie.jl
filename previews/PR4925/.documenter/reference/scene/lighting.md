@@ -75,7 +75,7 @@ The different light sources control the `light_direction` and may further adjust
 
 ```
 
-<a id="example-461a731" />
+<a id="example-a1c5a2e" />
 
 
 ```julia
@@ -92,7 +92,7 @@ end
 fig
 ```
 
-<img src="./461a731.png" width="600px" height="600px"/>
+<img src="./a1c5a2e.png" width="600px" height="600px"/>
 
 
 ### DirectionalLight {#DirectionalLight}
@@ -101,7 +101,7 @@ fig
 
 ```
 
-<a id="example-52d24ab" />
+<a id="example-a9672d4" />
 
 
 ```julia
@@ -123,7 +123,7 @@ end
 fig
 ```
 
-<img src="./52d24ab.png" width="600px" height="600px"/>
+<img src="./a9672d4.png" width="600px" height="600px"/>
 
 
 ### PointLight {#PointLight}
@@ -132,7 +132,7 @@ fig
 
 ```
 
-<a id="example-57d0aa1" />
+<a id="example-b3a6653" />
 
 
 ```julia
@@ -145,9 +145,9 @@ meshscatter!(ax, ps, color = :white)
 fig
 ```
 
-<img src="./57d0aa1.png" width="600px" height="600px"/>
+<img src="./b3a6653.png" width="600px" height="600px"/>
 
-<a id="example-5f12ee0" />
+<a id="example-b5a3323" />
 
 
 ```julia
@@ -169,11 +169,11 @@ scatter!(ax, map(l -> l.position[], lights), color = map(l -> l.color[], lights)
 fig
 ```
 
-<img src="./5f12ee0.png" width="600px" height="600px"/>
+<img src="./b5a3323.png" width="600px" height="600px"/>
 
 
 With a strong PointLight and Attenuation you can create different colors at different distances.
-<a id="example-15efcb8" />
+<a id="example-719b0ec" />
 
 
 ```julia
@@ -198,7 +198,7 @@ meshscatter!(
 fig
 ```
 
-<img src="./15efcb8.png" width="600px" height="600px"/>
+<img src="./719b0ec.png" width="600px" height="600px"/>
 
 
 ### SpotLight {#SpotLight}
@@ -207,7 +207,7 @@ fig
 
 ```
 
-<a id="example-d7bd1f3" />
+<a id="example-2e52d1b" />
 
 
 ```julia
@@ -227,7 +227,7 @@ scatter!(ax, map(l -> l.position[], lights), color = map(l -> l.color[], lights)
 fig
 ```
 
-<img src="./d7bd1f3.png" width="600px" height="600px"/>
+<img src="./2e52d1b.png" width="600px" height="600px"/>
 
 
 ### RectLight {#RectLight}
@@ -236,7 +236,7 @@ fig
 
 ```
 
-<a id="example-5d2ea81" />
+<a id="example-b90409d" />
 
 
 ```julia
@@ -314,7 +314,7 @@ fig
 └ @ MeshIO ~/.julia/packages/MeshIO/jBkmz/src/io/obj.jl:157
 ```
 
-<img src="./5d2ea81.png" width="600px" height="450px"/>
+<img src="./b90409d.png" width="600px" height="450px"/>
 
 
 ### EnvironmentLight {#EnvironmentLight}

@@ -22,7 +22,7 @@ Note that `voxels` is currently considered experimental and may still see breaki
 The plot type alias for the `voxels` function is `Voxels`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L632" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L632" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -30,7 +30,7 @@ The plot type alias for the `voxels` function is `Voxels`.
 ## Examples {#Examples}
 
 #### Basic Example {#Basic-Example}
-<a id="example-12585eb" />
+<a id="example-6b82a07" />
 
 
 ```julia
@@ -45,13 +45,13 @@ cube_with_holes = cube .* (cube .> 1.4)
 f, a, p = voxels(-1..1, -1..1, -1..1, cube_with_holes, is_air = x -> !(1.65 <= x <= 1.75))
 ```
 
-<img src="./12585eb.png" width="600px" height="450px"/>
+<img src="./6b82a07.png" width="600px" height="450px"/>
 
 
 #### Gap Attribute {#Gap-Attribute}
 
 The `gap` attribute allows you to specify a gap size between adjacent voxels. It is given in units of the voxel size (at `gap = 0`) so that `gap = 0` creates no gaps and `gap = 1` reduces the voxel size to 0. Note that this attribute only takes effect at values `gap > 0.01`.
-<a id="example-87eb97b" />
+<a id="example-e66bbba" />
 
 
 ```julia
@@ -60,13 +60,13 @@ chunk = reshape(collect(1:27), 3, 3, 3)
 voxels(chunk, gap = 0.33)
 ```
 
-<img src="./87eb97b.png" width="600px" height="450px"/>
+<img src="./e66bbba.png" width="600px" height="450px"/>
 
 
 #### Color and the internal representation {#Color-and-the-internal-representation}
 
 Voxels are represented as an `Array{UInt8, 3}` of voxel ids internally. In this representation the voxel id `0x00` is defined as an invisible air block. All other ids (0x01 - 0xff or 1 - 255) are visible and derive their color from the various color attributes. For `plot.color` specifically the voxel id acts as an index into an array of colors:
-<a id="example-41c5e73" />
+<a id="example-9af1517" />
 
 
 ```julia
@@ -79,13 +79,13 @@ chunk = UInt8[
 f, a, p = voxels(chunk, color = [:white, :red, :green, :blue, :black, :orange, :cyan, :magenta])
 ```
 
-<img src="./41c5e73.png" width="600px" height="450px"/>
+<img src="./9af1517.png" width="600px" height="450px"/>
 
 
 #### Colormaps {#Colormaps}
 
 With non `UInt8` inputs, colormap attributes (colormap, colorrange, highclip, lowclip and colorscale) work as usual, with the exception of `nan_color` which is not applicable:
-<a id="example-ab3c484" />
+<a id="example-ff11b74" />
 
 
 ```julia
@@ -99,7 +99,7 @@ f, a, p = voxels(chunk,
 )
 ```
 
-<img src="./ab3c484.png" width="600px" height="450px"/>
+<img src="./ff11b74.png" width="600px" height="450px"/>
 
 
 When passing voxel ids directly (i.e. an `Array{UInt8, 3}`) they are used to index a vector `[lowclip; sampled_colormap; highclip]`. This means id 1 maps to lowclip, 2..254 to colors of the colormap and 255 to highclip. `colorrange` and `colorscale` are ignored in this case.
@@ -107,7 +107,7 @@ When passing voxel ids directly (i.e. an `Array{UInt8, 3}`) they are used to ind
 #### Texture maps {#Texture-maps}
 
 For texture mapping we need an image containing multiple textures which are to be mapped to voxels. As an example, we will use [Kenney&#39;s Voxel Pack](https://www.kenney.nl/assets/voxel-pack).
-<a id="example-ccdbe5f" />
+<a id="example-2607355" />
 
 
 ```julia
@@ -117,11 +117,11 @@ texture = FileIO.load(Makie.assetpath("voxel_spritesheet.png"))
 image(0..1, 0..1, texture, axis=(xlabel = "u", ylabel="v"))
 ```
 
-<img src="./ccdbe5f.png" width="600px" height="450px"/>
+<img src="./2607355.png" width="600px" height="450px"/>
 
 
 Voxels render with texture mapping when `color` is an image and `uv_transform` is defined. In this case uv (texture) coordinates are generated, transformed by `uv_transform` and then used to sample the image. Each voxel starts with a 0..1 uv range, which can be shown by using Makie&#39;s &quot;debug_texture&quot; with an identity transform. Here magenta corresponds to (0, 0), blue to (1, 0), red to (0, 1) and green to (1, 1).
-<a id="example-501c981" />
+<a id="example-ae9c29d" />
 
 
 ```julia
@@ -131,11 +131,11 @@ texture = FileIO.load(Makie.assetpath("debug_texture.png"))
 voxels(ones(UInt8, 3,3,3), uv_transform = [I], color = texture)
 ```
 
-<img src="./501c981.png" width="600px" height="450px"/>
+<img src="./ae9c29d.png" width="600px" height="450px"/>
 
 
 To do texture mapping we want to transform the 0..1 uv range to a smaller range corresponding to textures in the image. We can do that by defining a `uv_transform` per voxel id that includes a translation and scaling.
-<a id="example-3c7b078" />
+<a id="example-95a6b30" />
 
 
 ```julia
@@ -162,11 +162,11 @@ chunk = UInt8[
 voxels(chunk, uv_transform = uvt, color = texture)
 ```
 
-<img src="./3c7b078.png" width="600px" height="450px"/>
+<img src="./95a6b30.png" width="600px" height="450px"/>
 
 
 Texture mapping can also be done per voxel side by passing a `Matrix` of uv transforms. Here the first index correspond to the voxel id and the second to a side following the order: -x, -y, -z, +x, +y, +z.
-<a id="example-150d341" />
+<a id="example-7de3484" />
 
 
 ```julia
@@ -200,7 +200,7 @@ chunk = UInt8[
 voxels(chunk, uv_transform = (uvt, :rotr90), color = texture)
 ```
 
-<img src="./150d341.png" width="600px" height="450px"/>
+<img src="./7de3484.png" width="600px" height="450px"/>
 
 
 Note that `uv_transform` allows various input types. You can find more information on them with `?Makie.uv_transform`. In the most general case a uv transform is a `Makie.Mat{2, 3, Float32}` which is multiplied to `Vec3f(uv..., 1)`. The `(translation, scale)` syntax we used above can be written as `Makie.Mat{2, 3, Float32}(1/10, 0, 0, 1/9, x, y)`.
@@ -210,7 +210,7 @@ Note that `uv_transform` allows various input types. You can find more informati
 The voxel plot is a bit different from other plot types which affects how you can and should update its data.
 
 First you _can_ pass your data as an `Observable` and update that observable as usual:
-<a id="example-dd05415" />
+<a id="example-362f390" />
 
 
 ```julia
@@ -221,11 +221,11 @@ chunk[] = rand(8,8,8)
 f
 ```
 
-<img src="./dd05415.png" width="600px" height="450px"/>
+<img src="./362f390.png" width="600px" height="450px"/>
 
 
 You can also update the data contained in the plot object. For this you can&#39;t index into the plot though, since that will return the converted voxel id data. Instead you need to index into `p.args`.
-<a id="example-e652d4d" />
+<a id="example-44d264c" />
 
 
 ```julia
@@ -235,11 +235,11 @@ p.args[end][] = rand(8,8,8)
 f
 ```
 
-<img src="./e652d4d.png" width="600px" height="450px"/>
+<img src="./44d264c.png" width="600px" height="450px"/>
 
 
 Both of these solutions triggers a full replacement of the input array (i.e. `chunk`), the internal representation (`plot.converted[4]`) and the texture on gpu. This can be quite slow and wasteful if you only want to update a small section of a large chunk. In that case you should instead update your input data without triggering an update (using `obs.val`) and then call `local_update(plot, is, js, ks)` to process the update:
-<a id="example-c2e87b2" />
+<a id="example-1c14501" />
 
 
 ```julia
@@ -251,7 +251,7 @@ Makie.local_update(p, 30:34, :, :)
 f
 ```
 
-<img src="./c2e87b2.png" width="600px" height="450px"/>
+<img src="./1c14501.png" width="600px" height="450px"/>
 
 
 #### Picking Voxels {#Picking-Voxels}

@@ -37,7 +37,7 @@ Broadly speaking, `qqline = :identity` is useful to see if `x` and `y` follow th
 The plot type alias for the `qqplot` function is `QQPlot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L594" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L594" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -45,7 +45,7 @@ The plot type alias for the `qqplot` function is `QQPlot`.
 ## Examples {#Examples}
 
 Test if `xs` and `ys` follow the same distribution.
-<a id="example-da5c5cd" />
+<a id="example-339c7f4" />
 
 
 ```julia
@@ -56,7 +56,7 @@ ys = randn(100)
 qqplot(xs, ys, qqline = :identity)
 ```
 
-<img src="./da5c5cd.png" width="600px" height="450px"/>
+<img src="./339c7f4.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

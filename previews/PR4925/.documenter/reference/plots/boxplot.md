@@ -29,13 +29,13 @@ Draw a Tukey style boxplot. The boxplot has 3 components:
 The plot type alias for the `boxplot` function is `BoxPlot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L599" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L599" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-14f9350" />
+<a id="example-6b8e41d" />
 
 
 ```julia
@@ -46,9 +46,9 @@ values = randn(1000)
 boxplot(categories, values)
 ```
 
-<img src="./14f9350.png" width="600px" height="450px"/>
+<img src="./6b8e41d.png" width="600px" height="450px"/>
 
-<a id="example-b6e2818" />
+<a id="example-12a29a3" />
 
 
 ```julia
@@ -60,7 +60,7 @@ dodge = rand(1:2, 1000)
 boxplot(categories, values, dodge = dodge, show_notch = true, color = dodge)
 ```
 
-<img src="./b6e2818.png" width="600px" height="450px"/>
+<img src="./12a29a3.png" width="600px" height="450px"/>
 
 
 Colors are customizable. The `color` attribute refers to the color of the boxes, whereas `outliercolor` refers to the color of the outliers. If not scalars (e.g. `:red`), these attributes must have the length of the data. If `outliercolor` is not provided, outliers will have the same color as their box, as shown above.
@@ -70,7 +70,7 @@ Colors are customizable. The `color` attribute refers to the color of the boxes,
 For all indices corresponding to points within the same box, `color` (but not `outliercolor`) must have the same value.
 
 :::
-<a id="example-dc4b6ea" />
+<a id="example-3d60813" />
 
 
 ```julia
@@ -82,11 +82,11 @@ dodge = rand(1:2, 1000)
 boxplot(categories, values, dodge = dodge, show_notch = true, color = map(d->d==1 ? :blue : :red, dodge) , outliercolor = rand([:red, :green, :blue, :black, :yellow], 1000))
 ```
 
-<img src="./dc4b6ea.png" width="600px" height="450px"/>
+<img src="./3d60813.png" width="600px" height="450px"/>
 
 
 #### Using statistical weights {#Using-statistical-weights}
-<a id="example-83e1d87" />
+<a id="example-dfa212a" />
 
 
 ```julia
@@ -107,11 +107,11 @@ boxplot(fig[1,2], x, y, weights = w)
 fig
 ```
 
-<img src="./83e1d87.png" width="600px" height="450px"/>
+<img src="./dfa212a.png" width="600px" height="450px"/>
 
 
 #### Horizontal axis {#Horizontal-axis}
-<a id="example-872598a" />
+<a id="example-ddad1d2" />
 
 
 ```julia
@@ -139,7 +139,7 @@ boxplot!(ax_horiz, categories, values; orientation=:horizontal)
 fig
 ```
 
-<img src="./872598a.png" width="600px" height="450px"/>
+<img src="./ddad1d2.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

@@ -4,7 +4,7 @@
 ## Using CairoMakie {#Using-CairoMakie}
 
 In CairoMakie, set the background color to `:transparent` (converts to `RGBAf(0, 0, 0, 0)`) to get a fully transparent background. In the following examples, I use a partially transparent blue because a transparent background is indistinguishable from the usual white on a white page.
-<a id="example-cbfbdc6" />
+<a id="example-3790d14" />
 
 
 ```julia
@@ -14,13 +14,13 @@ Axis(f[1, 1], backgroundcolor = (:tomato, 0.5))
 f
 ```
 
-<img src="./cbfbdc6.png" width="600px" height="450px"/>
+<img src="./3790d14.png" width="600px" height="450px"/>
 
 
 ## Using GLMakie {#Using-GLMakie}
 
 For technical reasons, GLMakie&#39;s color buffer does not have an alpha component:
-<a id="example-3790d14" />
+<a id="example-933c06f" />
 
 
 ```julia
@@ -30,7 +30,7 @@ Axis(f[1, 1], backgroundcolor = (:tomato, 0.5))
 f
 ```
 
-<img src="./3790d14.png" width="600px" height="450px"/>
+<img src="./933c06f.png" width="600px" height="450px"/>
 
 
 With the following trick you can still save an image with transparent background. It works by setting two different background colors and calculating the foreground color with alpha from the difference.

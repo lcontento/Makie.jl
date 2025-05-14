@@ -27,7 +27,7 @@ If any of `marker`, `markersize`, `markercolor`, `strokecolor` or `strokewidth` 
 The plot type alias for the `series` function is `Series`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L565" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L565" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -35,7 +35,7 @@ The plot type alias for the `series` function is `Series`.
 ## Examples {#Examples}
 
 ### Matrix {#Matrix}
-<a id="example-d36f33e" />
+<a id="example-2f38d37" />
 
 
 ```julia
@@ -47,11 +47,11 @@ axislegend(ax)
 fig
 ```
 
-<img src="./d36f33e.png" width="600px" height="450px"/>
+<img src="./2f38d37.png" width="600px" height="450px"/>
 
 
 ### Vector of vectors {#Vector-of-vectors}
-<a id="example-cb4a0de" />
+<a id="example-1caacbc" />
 
 
 ```julia
@@ -61,11 +61,11 @@ pointvectors = [Point2f.(1:100, cumsum(randn(100))) for i in 1:4]
 series(pointvectors, markersize=5, color=:Set1)
 ```
 
-<img src="./cb4a0de.png" width="600px" height="450px"/>
+<img src="./1caacbc.png" width="600px" height="450px"/>
 
 
 ### Vector and matrix {#Vector-and-matrix}
-<a id="example-302e2df" />
+<a id="example-5ecd4d3" />
 
 
 ```julia
@@ -75,7 +75,7 @@ data = cumsum(randn(4, 101), dims = 2)
 series(0:0.1:10, data, solid_color=:black)
 ```
 
-<img src="./302e2df.png" width="600px" height="450px"/>
+<img src="./5ecd4d3.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

@@ -19,13 +19,13 @@ Plots the given text(s) with a background(s) at the given position(s).
 The plot type alias for the `textlabel` function is `TextLabel`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L642" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L642" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-268a47e" />
+<a id="example-82558ac" />
 
 
 ```julia
@@ -38,9 +38,9 @@ textlabel!(a, Point2f(200, 150), text = "Cow", fontsize = 20)
 f
 ```
 
-<img src="./268a47e.png" width="600px" height="450px"/>
+<img src="./82558ac.png" width="600px" height="450px"/>
 
-<a id="example-bc9b598" />
+<a id="example-187def3" />
 
 
 ```julia
@@ -63,7 +63,7 @@ ylims!(a, -5, 65)
 f
 ```
 
-<img src="./bc9b598.png" width="600px" height="450px"/>
+<img src="./187def3.png" width="600px" height="450px"/>
 
 
 ### Custom Background Shapes {#Custom-Background-Shapes}
@@ -71,7 +71,7 @@ f
 The background shape can be adjusted with the `shape` attribute. It can be anything that converts to a vector of points through `convert_arguments`, e.g. a GeometryPrimitive, a BezierPath, a vector of points, etc. These points are then transformed to fit the text bounding box of the label. More specifically, they are transformed such that `shape_limits` gets scaled up to the text bounding box plus padding.
 
 Let&#39;s consider using a `Circle(Point2f(0), 1f0)` as our background shape. We want the text to fit inside the circle, so we want the text boundingbox to relate to an inner bounding box of the circle. We can choose this to be a square from `-sqrt(0.5) .. sqrt(0.5)` resulting in `shape_limits = Rect2f(-sqrt(0.5), -sqrt(0.5), sqrt(2), sqrt(2))`:
-<a id="example-e99e9df" />
+<a id="example-4fe85d5" />
 
 
 ```julia
@@ -101,11 +101,11 @@ ylims!(a, -2.5, 0.5)
 f
 ```
 
-<img src="./e99e9df.png" width="600px" height="450px"/>
+<img src="./4fe85d5.png" width="600px" height="450px"/>
 
 
 Another option for `shape` is to pass a function that constructs an already transformed vector of points from a translation and scale. If `shape_limits = Rect2f(0,0,1,1)` those are the origin and size of text boundingbox plus padding. This can be used, for example, to construct a circle that more tightly fits the text bounding box:
-<a id="example-be3e346" />
+<a id="example-19f4b5e" />
 
 
 ```julia
@@ -135,7 +135,7 @@ ylims!(a, -1.75, 1.75)
 f
 ```
 
-<img src="./be3e346.png" width="600px" height="450px"/>
+<img src="./19f4b5e.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

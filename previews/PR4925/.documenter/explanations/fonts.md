@@ -48,7 +48,7 @@ Attributes with 4 entries:
 Therefore, you can pick a font from this set by setting, for example, `font = :bold_italic`. The advantage of this is that you can set your fonts not by hardcoding specific ones at every place where you use `text`, but by setting the fonts at the top level.
 
 You can modify or add keys in the font set using `set_theme!`, `with_theme`, `update_theme!`, or by passing them to the `Figure` constructor. Here&#39;s an example:
-<a id="example-a1bca7a" />
+<a id="example-27848d8" />
 
 
 ```julia
@@ -59,7 +59,7 @@ Axis(f[1, 1], title = "A title", xlabel = "An x label", xlabelfont = :weird)
 f
 ```
 
-<img src="./a1bca7a.png" width="600px" height="450px"/>
+<img src="./27848d8.png" width="600px" height="450px"/>
 
 
 ## Emoji and color fonts {#Emoji-and-color-fonts}

@@ -18,7 +18,7 @@ Plots a surface, where `(x, y)` define a grid whose heights are the entries in `
 The plot type alias for the `surface` function is `Surface`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L605" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L605" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -28,7 +28,7 @@ The plot type alias for the `surface` function is `Surface`.
 ### Gridded surfaces {#Gridded-surfaces}
 
 By default surface data is placed on a grid matching the size of the input data. The grid can be specified explicitly by passing a Range or Vector of values as the X and Y arguments. The positions/vertices of the surface are then effectively derived as `Point.(X, Y', Z)`. Intervals (e.g `0..1`) can be used to specify the start and endpoint only, implying a linear range in between.
-<a id="example-1dcc83e" />
+<a id="example-797d625" />
 
 
 ```julia
@@ -40,9 +40,9 @@ zs = [cos(x) * sin(y) for x in xs, y in ys]
 surface(xs, ys, zs, axis=(type=Axis3,))
 ```
 
-<img src="./1dcc83e.png" width="600px" height="450px"/>
+<img src="./797d625.png" width="600px" height="450px"/>
 
-<a id="example-f88ec10" />
+<a id="example-5459833" />
 
 
 ```julia
@@ -57,9 +57,9 @@ surface(volcano,
     axis=(type=Axis3, azimuth = pi/4))
 ```
 
-<img src="./f88ec10.png" width="600px" height="450px"/>
+<img src="./5459833.png" width="600px" height="450px"/>
 
-<a id="example-2569cbe" />
+<a id="example-8bca021" />
 
 
 ```julia
@@ -108,13 +108,13 @@ surface(data; shading = NoShading, colormap = :deep)
 surface(data; shading = NoShading, colormap = :deep)
 ```
 
-<img src="./2569cbe.png" width="600px" height="450px"/>
+<img src="./8bca021.png" width="600px" height="450px"/>
 
 
 ### Quad Mesh surface {#Quad-Mesh-surface}
 
 X and Y values can also be given as a Matrix. In this case the surface positions follow as `Point.(X, Y, Z)` so the surface is no longer restricted to an XY grid.
-<a id="example-c772e5f" />
+<a id="example-233dd9a" />
 
 
 ```julia
@@ -129,13 +129,13 @@ zs = sin.(rs) .* cosd.(thetas')
 surface(xs, ys, zs)
 ```
 
-<img src="./c772e5f.png" width="600px" height="450px"/>
+<img src="./233dd9a.png" width="600px" height="450px"/>
 
 
 ### NaN Handling {#NaN-Handling}
 
 If a vertex of the surface is NaN, meaning that either X, Y or Z contribute NaN to it, all connected faces can not be drawn. Thus the surface will have a hole around a NaN vertex. If just a color is NaN it will be drawn with `nan_color`.
-<a id="example-330ff8c" />
+<a id="example-8ec5e86" />
 
 
 ```julia
@@ -151,13 +151,13 @@ surface(f[1, 2], 1:30, 1:30, zs, color = zs_nan, nan_color = :red, axis = (show_
 f
 ```
 
-<img src="./330ff8c.png" width="600px" height="300px"/>
+<img src="./8ec5e86.png" width="600px" height="300px"/>
 
 
 ### 2D Surface {#2D-Surface}
 
 A surface plot can act as an off-grid version of heatmap or image in 2D. For this it is recommended to pass data through `color` instead of the Z argument to avoid the plot interfering with others based on its Z values.
-<a id="example-3c6b546" />
+<a id="example-98396a2" />
 
 
 ```julia
@@ -172,7 +172,7 @@ zs = sin.(rs) .* cosd.(thetas')
 surface(xs, ys, zeros(size(zs)), color = zs, shading = NoShading)
 ```
 
-<img src="./3c6b546.png" width="600px" height="450px"/>
+<img src="./98396a2.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

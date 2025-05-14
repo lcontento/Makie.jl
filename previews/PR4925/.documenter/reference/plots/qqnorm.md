@@ -17,7 +17,7 @@ Shorthand for `qqplot(Normal(0,1), y)`, i.e., draw a Q-Q plot of `y` against the
 The plot type alias for the `qqnorm` function is `QQNorm`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L579" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L579" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -25,7 +25,7 @@ The plot type alias for the `qqnorm` function is `QQNorm`.
 ## Examples {#Examples}
 
 Test if `xs` is normally distributed.
-<a id="example-27ca432" />
+<a id="example-80f47e3" />
 
 
 ```julia
@@ -35,7 +35,7 @@ xs = 2 .* randn(100) .+ 3
 qqnorm(xs, qqline = :fitrobust)
 ```
 
-<img src="./27ca432.png" width="600px" height="450px"/>
+<img src="./80f47e3.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

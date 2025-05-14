@@ -27,13 +27,13 @@ Draw a crossbar. A crossbar represents a range with a (potentially notched) box.
 The plot type alias for the `crossbar` function is `CrossBar`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L579" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L579" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-1d633a2" />
+<a id="example-79387c0" />
 
 
 ```julia
@@ -47,7 +47,7 @@ dodge = [1, 2, 1, 2, 1, 2]
 crossbar(xs, ys, ymins, ymaxs, dodge = dodge, show_notch = true)
 ```
 
-<img src="./1d633a2.png" width="600px" height="450px"/>
+<img src="./79387c0.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

@@ -19,13 +19,13 @@ Plots a band from `ylower` to `yupper` along `x`. The form `band(lower, upper)` 
 The plot type alias for the `band` function is `Band`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L615" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L615" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-4d09df3" />
+<a id="example-a8d4d23" />
 
 
 ```julia
@@ -43,9 +43,9 @@ band!(xs, ys_low .- 1, ys_high .-1, color = :red)
 f
 ```
 
-<img src="./4d09df3.png" width="600px" height="450px"/>
+<img src="./a8d4d23.png" width="600px" height="450px"/>
 
-<a id="example-41bb851" />
+<a id="example-98459c2" />
 
 
 ```julia
@@ -66,9 +66,9 @@ band!(t, μ + σ, μ - σ)   # plot stddev band
 f
 ```
 
-<img src="./41bb851.png" width="600px" height="450px"/>
+<img src="./98459c2.png" width="600px" height="450px"/>
 
-<a id="example-84e43da" />
+<a id="example-e0ab3f4" />
 
 
 ```julia
@@ -79,7 +79,7 @@ col = repeat([1:50;50:-1:1],outer=2)
 band(lower, upper, color=col, axis=(type=Axis3,))
 ```
 
-<img src="./84e43da.png" width="600px" height="450px"/>
+<img src="./e0ab3f4.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}
@@ -149,7 +149,7 @@ Sets how strongly the red, green and blue channel react to diffuse (scattered) l
 Defaults to `:x`
 
 The direction of the band. If set to `:y`, x and y coordinates will be flipped, resulting in a vertical band. This setting applies only to 2D bands.
-<a id="example-20e496b" />
+<a id="example-81f83d3" />
 
 
 ```julia
@@ -165,7 +165,7 @@ band(fig[1, 2], location, lower, upper, direction = :y,
 fig
 ```
 
-<img src="./20e496b.png" width="600px" height="450px"/>
+<img src="./81f83d3.png" width="600px" height="450px"/>
 
 
 ### fxaa {#fxaa}

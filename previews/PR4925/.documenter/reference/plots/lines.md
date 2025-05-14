@@ -21,7 +21,7 @@ Creates a connected line plot for each element in `(x, y, z)`, `(x, y)` or `posi
 The plot type alias for the `lines` function is `Lines`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L605" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L605" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -35,7 +35,7 @@ In GLMakie 3D line plots can generate outline artifacts depending on the order l
   
 - `overdraw = true` will disable depth testing entirely (read and write) for the plot, removing artifacts. This will however change the z-order of line segments and allow plots rendered later to show up on top of the lines plot.
   
-<a id="example-2923749" />
+<a id="example-8246343" />
 
 
 ```julia
@@ -54,7 +54,7 @@ lines(f[4, 2], ps, color = cs, overdraw = true)
 f
 ```
 
-<img src="./2923749.png" width="600px" height="650px"/>
+<img src="./8246343.png" width="600px" height="650px"/>
 
 
 ## Attributes {#Attributes}
@@ -76,7 +76,7 @@ Clip planes offer a way to do clipping in 3D space. You can set a Vector of up t
 Defaults to `@inherit linecolor`
 
 The color of the line.
-<a id="example-51baa60" />
+<a id="example-b55b603" />
 
 
 ```julia
@@ -93,7 +93,7 @@ lines!(ax, 1:9, iseven.(1:9) .- 4; color = RGBf.(0, (0:8) ./ 8, 0))
 fig
 ```
 
-<img src="./51baa60.png" width="600px" height="450px"/>
+<img src="./b55b603.png" width="600px" height="450px"/>
 
 
 ### colormap {#colormap}
@@ -167,7 +167,7 @@ Sets a callback function `(plot, index, position) -> string` which replaces the 
 Defaults to `@inherit joinstyle`
 
 Controls the rendering at corners. Options are `:miter` for sharp corners, `:bevel` for &quot;cut off&quot; corners, and `:round` for rounded corners. If the corner angle is below `miter_limit`, `:miter` is equivalent to `:bevel` to avoid long spikes.
-<a id="example-a295fbc" />
+<a id="example-fbcb0e1" />
 
 
 ```julia
@@ -196,7 +196,7 @@ below miter_limit,
 fig
 ```
 
-<img src="./a295fbc.png" width="600px" height="450px"/>
+<img src="./fbcb0e1.png" width="600px" height="450px"/>
 
 
 ### linecap {#linecap}
@@ -204,7 +204,7 @@ fig
 Defaults to `@inherit linecap`
 
 Sets the type of line cap used. Options are `:butt` (flat without extrusion), `:square` (flat with half a linewidth extrusion) or `:round`.
-<a id="example-850998d" />
+<a id="example-de2a59d" />
 
 
 ```julia
@@ -223,7 +223,7 @@ end
 fig
 ```
 
-<img src="./850998d.png" width="600px" height="450px"/>
+<img src="./de2a59d.png" width="600px" height="450px"/>
 
 
 ### linestyle {#linestyle}
@@ -233,7 +233,7 @@ Defaults to `nothing`
 Sets the dash pattern of the line. Options are `:solid` (equivalent to `nothing`), `:dot`, `:dash`, `:dashdot` and `:dashdotdot`. These can also be given in a tuple with a gap style modifier, either `:normal`, `:dense` or `:loose`. For example, `(:dot, :loose)` or `(:dashdot, :dense)`.
 
 For custom patterns have a look at [`Makie.Linestyle`](/api#Makie.Linestyle).
-<a id="example-856f1d1" />
+<a id="example-618c4ec" />
 
 
 ```julia
@@ -258,9 +258,9 @@ end
 fig
 ```
 
-<img src="./856f1d1.png" width="600px" height="450px"/>
+<img src="./618c4ec.png" width="600px" height="450px"/>
 
-<a id="example-27058f3" />
+<a id="example-8aa5e92" />
 
 
 ```julia
@@ -284,7 +284,7 @@ hidedecorations!(ax)
 fig
 ```
 
-<img src="./27058f3.png" width="600px" height="450px"/>
+<img src="./8aa5e92.png" width="600px" height="450px"/>
 
 
 ### linewidth {#linewidth}
@@ -292,7 +292,7 @@ fig
 Defaults to `@inherit linewidth`
 
 Sets the width of the line in screen units
-<a id="example-f3454db" />
+<a id="example-4c7a9c8" />
 
 
 ```julia
@@ -309,7 +309,7 @@ end
 fig
 ```
 
-<img src="./f3454db.png" width="600px" height="450px"/>
+<img src="./4c7a9c8.png" width="600px" height="450px"/>
 
 
 ### lowclip {#lowclip}

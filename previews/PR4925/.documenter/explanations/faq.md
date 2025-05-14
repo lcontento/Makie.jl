@@ -104,7 +104,7 @@ If `Makie` can&#39;t find your font, you can do two things:
 ### Elements are squashed into the lower left corner {#Elements-are-squashed-into-the-lower-left-corner}
 
 Block elements require a bounding box that they align themselves to. If you place such an element in a layout, the bounding box is controlled by that layout. If you forget to put an element in a layout, it will have its default bounding box of `BBox(0, 100, 0, 100)` which ends up being in the lower left corner. You can also choose to specify a bounding box manually if you need more control.
-<a id="example-f0fe803" />
+<a id="example-4a0bbce" />
 
 
 ```julia
@@ -119,13 +119,13 @@ ax3 = Axis(f, bbox = BBox(200, 600, 100, 500),
 f
 ```
 
-<img src="./f0fe803.png" width="600px" height="450px"/>
+<img src="./4a0bbce.png" width="600px" height="450px"/>
 
 
 ### Columns or rows are shrunk to the size of Text or another element {#Columns-or-rows-are-shrunk-to-the-size-of-Text-or-another-element}
 
 Columns or rows that have size `Auto(true)` try to determine the width or height of all single-spanned elements that are placed in them, and if any elements &quot;tell&quot; the layout their own height or width, the row or column will shrink to the maximum reported size. This is so smaller elements with a known size take as little space as needed. But if there is other content in the row that should take more space, you can give the offending element the attribute `tellheight = false` or `tellwidth = false`. This way, its own height or width doesn&#39;t influence the automatic sizing of the layout. Alternatively, you can set the size of that row or column to `Auto(false)` (or any other value than `Auto(true)`).
-<a id="example-b61f182" />
+<a id="example-1f0a2d9" />
 
 
 ```julia
@@ -140,7 +140,7 @@ Label(f[2, 2], "This Label has the setting\ntellheight = false.\nThe row it is i
 f
 ```
 
-<img src="./b61f182.png" width="600px" height="450px"/>
+<img src="./1f0a2d9.png" width="600px" height="450px"/>
 
 
 ### The Figure content does not fit the Figure {#The-Figure-content-does-not-fit-the-Figure}
@@ -152,7 +152,7 @@ This works well when all content is adjustable in width and height, such as an `
 If this is the case, you can use the function `resize_to_layout!`, which determines the actual size of the main `GridLayout` given its content, and resizes the `Figure` to fit.
 
 Here is an example, where all `Axis` objects are given fixed widths and heights. There are not enough degrees of freedom for the layout algorithm to fit everything nicely into the `Figure`:
-<a id="example-6a3751a" />
+<a id="example-c377956" />
 
 
 ```julia
@@ -172,13 +172,13 @@ Colorbar(f[1:3, 4])
 f
 ```
 
-<img src="./6a3751a.png" width="800px" height="600px"/>
+<img src="./c377956.png" width="800px" height="600px"/>
 
 
 As you can see, there&#39;s empty space on all four sides, because there are no flexible objects that could fill it.
 
 But once we run `resize_to_layout!`, the `Figure` assumes the appropriate size for our axes:
-<a id="example-f2cddcc" />
+<a id="example-51388df" />
 
 
 ```julia
@@ -186,5 +186,5 @@ resize_to_layout!(f)
 f
 ```
 
-<img src="./f2cddcc.png" width="450px" height="452px"/>
+<img src="./51388df.png" width="450px" height="452px"/>
 

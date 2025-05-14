@@ -21,13 +21,13 @@ If you want to plot errors relative to a reference value, use `errorbars`.
 The plot type alias for the `rangebars` function is `Rangebars`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L595" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L595" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-c9c1cae" />
+<a id="example-22e1fc9" />
 
 
 ```julia
@@ -44,9 +44,9 @@ rangebars!(vals, lows, highs, color = :red)
 f
 ```
 
-<img src="./c9c1cae.png" width="600px" height="450px"/>
+<img src="./22e1fc9.png" width="600px" height="450px"/>
 
-<a id="example-b910f71" />
+<a id="example-1cc6c22" />
 
 
 ```julia
@@ -64,7 +64,7 @@ rangebars!(vals, lows, highs, color = LinRange(0, 1, length(vals)),
 f
 ```
 
-<img src="./b910f71.png" width="600px" height="450px"/>
+<img src="./1cc6c22.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

@@ -20,7 +20,7 @@ All volume plots are derived from casting rays for each drawn pixel. These rays 
 The plot type alias for the `volume` function is `Volume`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L614" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L614" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -30,7 +30,7 @@ The plot type alias for the `volume` function is `Volume`.
 ### Value based Algorithms (:absorption, :mip, :iso, counter) {#Value-based-Algorithms-:absorption,-:mip,-:iso,-counter}
 
 Value based algorithms samples sample the colormap using values from volume data.
-<a id="example-8822b75" />
+<a id="example-64383ea" />
 
 
 ```julia
@@ -40,9 +40,9 @@ cube = [(x.^2 + y.^2 + z.^2) for x = r, y = r, z = r]
 contour(cube, alpha=0.5)
 ```
 
-<img src="./8822b75.png" width="600px" height="450px"/>
+<img src="./64383ea.png" width="600px" height="450px"/>
 
-<a id="example-486efbd" />
+<a id="example-a6d9a19" />
 
 
 ```julia
@@ -50,9 +50,9 @@ cube_with_holes = cube .* (cube .> 1.4)
 volume(cube_with_holes, algorithm = :iso, isorange = 0.05, isovalue = 1.7)
 ```
 
-<img src="./486efbd.png" width="600px" height="450px"/>
+<img src="./a6d9a19.png" width="600px" height="450px"/>
 
-<a id="example-b354ef8" />
+<a id="example-c959f66" />
 
 
 ```julia
@@ -71,13 +71,13 @@ volume(fig[1, 2], normed, algorithm = :mip, colormap=colormap, axis=(type=Axis3,
 fig
 ```
 
-<img src="./b354ef8.png" width="1000px" height="450px"/>
+<img src="./c959f66.png" width="1000px" height="450px"/>
 
 
 ### RGB(A) Algorithms (:absorptionrgba, :additive) {#RGBA-Algorithms-:absorptionrgba,-:additive}
 
 RGBA algorithms sample colors directly from the given volume data. If the data contains less than 4 dimensions the remaining dimensions are filled with 0 for the green and blue channel and 1 for the alpha channel.
-<a id="example-d14b185" />
+<a id="example-3a1d6b8" />
 
 
 ```julia
@@ -107,13 +107,13 @@ volume(f[1, 2], data, algorithm = :additive)
 f
 ```
 
-<img src="./d14b185.png" width="700px" height="400px"/>
+<img src="./3a1d6b8.png" width="700px" height="400px"/>
 
 
 ### Indexing Algorithms (:indexedabsorption) {#Indexing-Algorithms-:indexedabsorption}
 
 Indexing Algorithms interpret the value read from volume data as an index into the colormap. So effectively it reads `idx = round(Int, get(data, sample_pos))` and uses `colormap[idx]` as the color of the sample. Note that you can still use float data here, and without `interpolate = false` it will be interpolated.
-<a id="example-82988f3" />
+<a id="example-dbc3364" />
 
 
 ```julia
@@ -127,7 +127,7 @@ volume(data, algorithm = :indexedabsorption, colormap = colormap,
     interpolate = false, absorption = 5)
 ```
 
-<img src="./82988f3.png" width="600px" height="450px"/>
+<img src="./dbc3364.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

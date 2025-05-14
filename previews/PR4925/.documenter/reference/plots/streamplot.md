@@ -29,13 +29,13 @@ See the function `Makie.streamplot_impl` for implementation details.
 The plot type alias for the `streamplot` function is `StreamPlot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L619" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L619" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-ed36a36" />
+<a id="example-4901ac5" />
 
 
 ```julia
@@ -62,7 +62,7 @@ streamplot(fig[1,2], f, -1.5 .. 1.5, -1.5 .. 1.5, color=(p)-> RGBAf(p..., 0.0, 1
 fig
 ```
 
-<img src="./ed36a36.png" width="600px" height="450px"/>
+<img src="./4901ac5.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

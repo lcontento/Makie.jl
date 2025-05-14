@@ -60,7 +60,7 @@ stock_price = cumsum(randn(500) .+ 0.5)
 ### 3. Create the Main Plot {#3.-Create-the-Main-Plot}
 
 Use `Figure()` and `Axis()` to set up the main plot area and display the stock price data.
-<a id="example-1ac3272" />
+<a id="example-73f8032" />
 
 
 ```julia
@@ -75,7 +75,7 @@ line_main = lines!(ax_main, time, stock_price, color=:blue)
 fig
 ```
 
-<img src="./1ac3272.png" width="800px" height="600px"/>
+<img src="./73f8032.png" width="800px" height="600px"/>
 
 
 ### 4. Add an Inset Axis {#4.-Add-an-Inset-Axis}
@@ -103,7 +103,7 @@ To adjust the axis size, use `width` and `height` attributes. To adjust the axis
 ### 5. Plot Data in the Inset {#5.-Plot-Data-in-the-Inset}
 
 We need to define the data for the inset. For instance, select the data between 50 to 70 days range and corresponding data for the price movement.
-<a id="example-7c7da43" />
+<a id="example-d588a87" />
 
 
 ```julia
@@ -114,7 +114,7 @@ line_inset = lines!(ax_inset, time, stock_price, color=:red)
 fig
 ```
 
-<img src="./7c7da43.png" width="800px" height="600px"/>
+<img src="./d588a87.png" width="800px" height="600px"/>
 
 
 ### 6. Control Drawing Order of Axes {#6.-Control-Drawing-Order-of-Axes}
@@ -153,7 +153,7 @@ This adds a legend to the right of the figure, associating the blue line with th
 ### 8. Mark the Zoomed Section {#8.-Mark-the-Zoomed-Section}
 
 Indicate the zoomed section of the main plot by drawing a border around the selected region.
-<a id="example-28969b2" />
+<a id="example-81cc36e" />
 
 
 ```julia
@@ -162,7 +162,7 @@ lines!(ax_main, border_rect, color=:black, linewidth=1)
 fig
 ```
 
-<img src="./28969b2.png" width="800px" height="600px"/>
+<img src="./81cc36e.png" width="800px" height="600px"/>
 
 
 ## Complete Code Example {#Complete-Code-Example}

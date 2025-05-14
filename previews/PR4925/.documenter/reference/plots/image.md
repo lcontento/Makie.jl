@@ -18,13 +18,13 @@ Plots an image on a rectangle bounded by `x` and `y` (defaults to size of image)
 The plot type alias for the `image` function is `Image`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L587" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L587" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-2376abf" />
+<a id="example-7cac10b" />
 
 
 ```julia
@@ -51,7 +51,7 @@ image(f[2, 2], img',
 f
 ```
 
-<img src="./2376abf.png" width="600px" height="450px"/>
+<img src="./7cac10b.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

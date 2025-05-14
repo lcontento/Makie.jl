@@ -2,7 +2,7 @@
 # How to draw boxes around subfigures {#How-to-draw-boxes-around-subfigures}
 
 If you want to show that several elements in a `Figure` belong together, you can do this by placing them all in a container. The trick is to use a nested `GridLayout` for each group of objects and place a `Box` at the same position as this `GridLayout`. Then the `alignmode = Outside(some_padding)` ensures that objects with protrusions sticking out, like `Axis`, are fully contained within the enclosing boxes.
-<a id="example-60d88e5" />
+<a id="example-b74821f" />
 
 
 ```julia
@@ -30,11 +30,11 @@ Label(f[0, :], "Two boxes indicate groups of axes that belong together")
 f
 ```
 
-<img src="./60d88e5.png" width="600px" height="450px"/>
+<img src="./b74821f.png" width="600px" height="450px"/>
 
 
 In other situations you may simply want to encircle parts of an existing layout without otherwise changing it. You can use the `Outer` side to position the boxes at the outer edge of their neighbors, in combination with a slightly negative `Outside(...)` alignmode (what margins look good here needs to be adjusted to taste).
-<a id="example-ab63fb7" />
+<a id="example-739e70f" />
 
 
 ```julia
@@ -75,5 +75,5 @@ Legend(
 f
 ```
 
-<img src="./ab63fb7.png" width="600px" height="450px"/>
+<img src="./739e70f.png" width="600px" height="450px"/>
 

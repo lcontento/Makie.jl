@@ -19,13 +19,13 @@ The conversion trait of `stairs` is `PointBased`.
 The plot type alias for the `stairs` function is `Stairs`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L611" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L611" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-231960f" />
+<a id="example-7ee5350" />
 
 
 ```julia
@@ -42,7 +42,7 @@ stairs(f[3, 1], xs, ys; step=:center, color=:red, linestyle=:dot)
 f
 ```
 
-<img src="./231960f.png" width="600px" height="450px"/>
+<img src="./7ee5350.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

@@ -19,7 +19,7 @@ Plots a triangulation based on the provided position or `Triangulation` from Del
 The plot type alias for the `triplot` function is `Triplot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L584" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L584" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -27,7 +27,7 @@ The plot type alias for the `triplot` function is `Triplot`.
 ## Examples {#Examples}
 
 A `triplot` plots a triangle mesh generated from an arbitrary set of points. The input data can either be point based (like `scatter` or `lines`) or a `Triangulation` from [DelaunayTriangulation.jl](https://github.com/DanielVandH/DelaunayTriangulation.jl).
-<a id="example-e87b30d" />
+<a id="example-4443d75" />
 
 
 ```julia
@@ -45,11 +45,11 @@ ax, tr = triplot(f[1, 2], tri, show_points = true)
 f
 ```
 
-<img src="./e87b30d.png" width="600px" height="450px"/>
+<img src="./4443d75.png" width="600px" height="450px"/>
 
 
 You can use `triplot` to visualise the [ghost edges](https://juliageometry.github.io/DelaunayTriangulation.jl/stable/manual/ghost_triangles/) surrounding the boundary.
-<a id="example-e0ddd6d" />
+<a id="example-3cbdab9" />
 
 
 ```julia
@@ -70,11 +70,11 @@ f, ax, tr = triplot(tri; show_ghost_edges = true, show_points = true)
 f
 ```
 
-<img src="./e0ddd6d.png" width="600px" height="450px"/>
+<img src="./3cbdab9.png" width="600px" height="450px"/>
 
 
 You can also highlight the constrained edges and display the convex hull, which is especially useful when the triangulation is no longer convex.
-<a id="example-9bafd60" />
+<a id="example-ecfaa6a" />
 
 
 ```julia
@@ -102,7 +102,7 @@ f, ax, tr = triplot(tri, show_constrained_edges = true, constrained_edge_linewid
 f
 ```
 
-<img src="./9bafd60.png" width="600px" height="450px"/>
+<img src="./ecfaa6a.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

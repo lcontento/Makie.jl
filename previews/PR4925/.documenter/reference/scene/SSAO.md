@@ -16,7 +16,7 @@ The SSAO postprocessor is turned off by default to save on resources. To turn it
 :::
 
 ## Example {#Example}
-<a id="example-3b995e3" />
+<a id="example-a72eeff" />
 
 
 ```julia
@@ -36,7 +36,7 @@ meshscatter!(ax, positions, marker=box, markersize=1, color=:lightblue, ssao=tru
 fig
 ```
 
-<img src="./3b995e3.png" width="600px" height="450px"/>
+<img src="./a72eeff.png" width="600px" height="450px"/>
 
 
 ```

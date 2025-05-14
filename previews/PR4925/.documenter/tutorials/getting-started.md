@@ -82,14 +82,14 @@ measurements = [8.2, 8.4, 6.3, 9.5, 9.1, 10.5, 8.6, 8.2, 10.5, 8.5, 7.2,
 
 
 Let&#39;s have a first look at this data as a line plot. Line plots are created with the [lines](/reference/plots/lines#lines) function in Makie.
-<a id="example-414f599" />
+<a id="example-9d24930" />
 
 
 ```julia
 lines(seconds, measurements)
 ```
 
-<img src="./414f599.png" width="600px" height="450px"/>
+<img src="./9d24930.png" width="600px" height="450px"/>
 
 
 ::: tip Info
@@ -101,31 +101,31 @@ If you are in an IDE like VSCode with the Julia extension installed, the plot pa
 :::
 
 Let&#39;s try another plot function, to show each data point as a separate marker. The right function for that is [scatter](/reference/plots/scatter#scatter).
-<a id="example-eb7c230" />
+<a id="example-6522fe5" />
 
 
 ```julia
 scatter(seconds, measurements)
 ```
 
-<img src="./eb7c230.png" width="600px" height="450px"/>
+<img src="./6522fe5.png" width="600px" height="450px"/>
 
 
 Our goal is to show the measurement data together with a line representing an exponential fit. Let us pretend that the function we have &quot;fit&quot; is `f(x) = exp(x) + 7`. We can plot it as a line like this:
-<a id="example-15ab455" />
+<a id="example-7181277" />
 
 
 ```julia
 lines(seconds, exp.(seconds) .+ 7)
 ```
 
-<img src="./15ab455.png" width="600px" height="450px"/>
+<img src="./7181277.png" width="600px" height="450px"/>
 
 
 Now, we&#39;d like to have the scatter and lines plots layered on top of each other.
 
 You can plot into an existing axis with plotting functions that end with a `!`:
-<a id="example-54f61f1" />
+<a id="example-5be3b7e" />
 
 
 ```julia
@@ -134,7 +134,7 @@ lines!(seconds, exp.(seconds) .+ 7)
 current_figure()
 ```
 
-<img src="./54f61f1.png" width="600px" height="450px"/>
+<img src="./5be3b7e.png" width="600px" height="450px"/>
 
 
 ## Figure and Axis {#Figure-and-Axis}
@@ -142,7 +142,7 @@ current_figure()
 So far, we have used two important objects in Makie only implicitly, the [Figure](/explanations/figure#Figures) and the [Axis](/reference/blocks/axis#Axis).
 
 The `Figure` is the outermost container object. And an `Axis` is one type of axis object that can contain plots. An `Axis` can be placed in a `Figure` and then be plotted into. Let&#39;s try the previous plot with this system:
-<a id="example-675bfdf" />
+<a id="example-c3337a5" />
 
 
 ```julia
@@ -153,13 +153,13 @@ lines!(ax, seconds, exp.(seconds) .+ 7)
 f
 ```
 
-<img src="./675bfdf.png" width="600px" height="450px"/>
+<img src="./c3337a5.png" width="600px" height="450px"/>
 
 
 Both `scatter!` and `lines!` now explicitly plot into an `Axis` which we put into a `Figure`. `Axis(f[1, 1])` means that we put the `Axis` at the `Figure`&#39;s layout at position row 1, column 1.
 
 We can now give our `Axis` a title, as well as x and y axis labels:
-<a id="example-51e4c2b" />
+<a id="example-bfefc9a" />
 
 
 ```julia
@@ -174,13 +174,13 @@ lines!(ax, seconds, exp.(seconds) .+ 7)
 f
 ```
 
-<img src="./51e4c2b.png" width="600px" height="450px"/>
+<img src="./bfefc9a.png" width="600px" height="450px"/>
 
 
 ## Plot styling {#Plot-styling}
 
 Plotting functions take many different style attributes as keyword arguments. Let&#39;s change the color of both plots to a red called `:tomato`, and the line style to `:dash`:
-<a id="example-cd2bf98" />
+<a id="example-265f47c" />
 
 
 ```julia
@@ -195,13 +195,13 @@ lines!(ax, seconds, exp.(seconds) .+ 7, color = :tomato, linestyle = :dash)
 f
 ```
 
-<img src="./cd2bf98.png" width="600px" height="450px"/>
+<img src="./265f47c.png" width="600px" height="450px"/>
 
 
 ## Legend {#Legend}
 
 The last element we&#39;re missing is the legend. One way to create a legend is by labelling plots with the `label` keyword and using the [`axislegend`](/api#Makie.axislegend-Tuple{Any,%20Vararg{Any}}) function:
-<a id="example-a9944d8" />
+<a id="example-2c9a64c" />
 
 
 ```julia
@@ -230,7 +230,7 @@ axislegend(position = :rb)
 f
 ```
 
-<img src="./a9944d8.png" width="600px" height="450px"/>
+<img src="./2c9a64c.png" width="600px" height="450px"/>
 
 
 ## Saving a Figure {#Saving-a-Figure}

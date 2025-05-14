@@ -19,13 +19,13 @@ Creates a pie chart from the given `values`.
 The plot type alias for the `pie` function is `Pie`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L581" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L581" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-8a828c0" />
+<a id="example-e3b8752" />
 
 
 ```julia
@@ -45,9 +45,9 @@ f, ax, plt = pie(data,
 f
 ```
 
-<img src="./8a828c0.png" width="600px" height="450px"/>
+<img src="./e3b8752.png" width="600px" height="450px"/>
 
-<a id="example-f6f3552" />
+<a id="example-5a927ac" />
 
 
 ```julia
@@ -62,9 +62,9 @@ f, ax, plt = pie([π/2, 2π/3, π/4],
 f
 ```
 
-<img src="./f6f3552.png" width="600px" height="450px"/>
+<img src="./5a927ac.png" width="600px" height="450px"/>
 
-<a id="example-dbbb191" />
+<a id="example-34f042e" />
 
 
 ```julia
@@ -95,9 +95,9 @@ fig
 └ @ Makie ~/work/Makie.jl/Makie.jl/src/patterns.jl:75
 ```
 
-<img src="./dbbb191.png" width="600px" height="450px"/>
+<img src="./34f042e.png" width="600px" height="450px"/>
 
-<a id="example-d6574c5" />
+<a id="example-2f7770c" />
 
 
 ```julia
@@ -136,7 +136,7 @@ pie!(ax, 9.5 .+ Δx, -6 .+ Δy, vs_; inner_radius=0.2, color=cs, offset_radius=0
 fig
 ```
 
-<img src="./d6574c5.png" width="600px" height="450px"/>
+<img src="./2f7770c.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

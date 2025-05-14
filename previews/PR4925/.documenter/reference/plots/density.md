@@ -17,13 +17,13 @@ Plot a kernel density estimate of `values`.
 The plot type alias for the `density` function is `Density`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L569" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L569" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-fcada05" />
+<a id="example-532e058" />
 
 
 ```julia
@@ -37,9 +37,9 @@ density!(randn(200) .+ 2, alpha = 0.8)
 f
 ```
 
-<img src="./fcada05.png" width="600px" height="450px"/>
+<img src="./532e058.png" width="600px" height="450px"/>
 
-<a id="example-2d56e53" />
+<a id="example-892ca46" />
 
 
 ```julia
@@ -52,9 +52,9 @@ density!(randn(200), direction = :y, npoints = 10)
 f
 ```
 
-<img src="./2d56e53.png" width="600px" height="450px"/>
+<img src="./892ca46.png" width="600px" height="450px"/>
 
-<a id="example-7bf249d" />
+<a id="example-dcf2394" />
 
 
 ```julia
@@ -68,9 +68,9 @@ density!(randn(200), color = (:red, 0.3),
 f
 ```
 
-<img src="./7bf249d.png" width="600px" height="450px"/>
+<img src="./dcf2394.png" width="600px" height="450px"/>
 
-<a id="example-742a425" />
+<a id="example-cffff4c" />
 
 
 ```julia
@@ -88,13 +88,13 @@ end
 f
 ```
 
-<img src="./742a425.png" width="600px" height="450px"/>
+<img src="./cffff4c.png" width="600px" height="450px"/>
 
 
 #### Gradients {#Gradients}
 
 You can color density plots with gradients by choosing `color = :x` or `:y`, depending on the `direction` attribute.
-<a id="example-dd85017" />
+<a id="example-3405325" />
 
 
 ```julia
@@ -117,11 +117,11 @@ end
 f
 ```
 
-<img src="./dd85017.png" width="600px" height="450px"/>
+<img src="./3405325.png" width="600px" height="450px"/>
 
 
 Due to technical limitations, if you color the `:vertical` dimension (or :horizontal with direction = :y), only a colormap made with just two colors can currently work:
-<a id="example-db72da9" />
+<a id="example-374994f" />
 
 
 ```julia
@@ -135,11 +135,11 @@ end
 f
 ```
 
-<img src="./db72da9.png" width="600px" height="450px"/>
+<img src="./374994f.png" width="600px" height="450px"/>
 
 
 #### Using statistical weights {#Using-statistical-weights}
-<a id="example-c787925" />
+<a id="example-28874e0" />
 
 
 ```julia
@@ -159,7 +159,7 @@ density(fig[1,2], x, weights = w)
 fig
 ```
 
-<img src="./c787925.png" width="600px" height="450px"/>
+<img src="./28874e0.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

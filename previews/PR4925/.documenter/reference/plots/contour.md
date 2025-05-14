@@ -20,13 +20,13 @@ Creates a contour plot of the plane spanning `x::Vector`, `y::Vector`, `z::Matri
 The plot type alias for the `contour` function is `Contour`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-24ee0ff" />
+<a id="example-7b6e5fe" />
 
 
 ```julia
@@ -43,11 +43,11 @@ contour!(xs, ys, zs)
 f
 ```
 
-<img src="./24ee0ff.png" width="600px" height="450px"/>
+<img src="./7b6e5fe.png" width="600px" height="450px"/>
 
 
 Omitting the `xs` and `ys` results in the indices of `zs` being used. We can also set arbitrary contour-levels using `levels`
-<a id="example-6f235eb" />
+<a id="example-caf8c8a" />
 
 
 ```julia
@@ -64,11 +64,11 @@ contour!(zs,levels=-1:0.1:1)
 f
 ```
 
-<img src="./6f235eb.png" width="600px" height="450px"/>
+<img src="./caf8c8a.png" width="600px" height="450px"/>
 
 
 One can also add labels and control label attributes such as `labelsize`, `labelcolor` or `labelfont`.
-<a id="example-8b0d669" />
+<a id="example-ec0d91e" />
 
 
 ```julia
@@ -83,7 +83,7 @@ f, ax, ct = contour(x, y, z; labels=true, levels, colormap=:hsv, colorscale)
 f
 ```
 
-<img src="./8b0d669.png" width="600px" height="450px"/>
+<img src="./ec0d91e.png" width="600px" height="450px"/>
 
 
 ### Curvilinear grids {#Curvilinear-grids}
@@ -91,7 +91,7 @@ f
 `contour` also supports _curvilinear_ grids, where `x` and `y` are both matrices of the same size as `z`. This is similar to the input that [`surface`](/reference/plots/surface#surface) accepts.
 
 Let&#39;s warp a regular grid of `x` and `y` by some nonlinear function, and plot its contours:
-<a id="example-30c1f5f" />
+<a id="example-8c9633a" />
 
 
 ```julia
@@ -116,7 +116,7 @@ ctr = contour!(ax, xs, ys, zs; color = :orange, levels = levels, labels = true, 
 fig
 ```
 
-<img src="./30c1f5f.png" width="600px" height="450px"/>
+<img src="./8c9633a.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

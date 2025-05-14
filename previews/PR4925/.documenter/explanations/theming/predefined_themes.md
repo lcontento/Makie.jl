@@ -69,80 +69,80 @@ demofigure (generic function with 1 method)
 
 
 ## Default theme {#Default-theme}
-<a id="example-d0663a7" />
+<a id="example-2c3032d" />
 
 
 ```julia
 demofigure()
 ```
 
-<img src="./d0663a7.png" width="600px" height="450px"/>
+<img src="./2c3032d.png" width="600px" height="450px"/>
 
 
 ## theme_ggplot2 {#theme_ggplot2}
-<a id="example-f6b2405" />
+<a id="example-4d283bf" />
 
 
 ```julia
 with_theme(demofigure, theme_ggplot2())
 ```
 
-<img src="./f6b2405.png" width="600px" height="450px"/>
+<img src="./4d283bf.png" width="600px" height="450px"/>
 
 
 ## theme_minimal {#theme_minimal}
-<a id="example-19f3a5d" />
+<a id="example-75be361" />
 
 
 ```julia
 with_theme(demofigure, theme_minimal())
 ```
 
-<img src="./19f3a5d.png" width="600px" height="450px"/>
+<img src="./75be361.png" width="600px" height="450px"/>
 
 
 ## theme_black {#theme_black}
-<a id="example-8d97e37" />
+<a id="example-f939a90" />
 
 
 ```julia
 with_theme(demofigure, theme_black())
 ```
 
-<img src="./8d97e37.png" width="600px" height="450px"/>
+<img src="./f939a90.png" width="600px" height="450px"/>
 
 
 ## theme_light {#theme_light}
-<a id="example-9ef9290" />
+<a id="example-fac403f" />
 
 
 ```julia
 with_theme(demofigure, theme_light())
 ```
 
-<img src="./9ef9290.png" width="600px" height="450px"/>
+<img src="./fac403f.png" width="600px" height="450px"/>
 
 
 ## theme_dark {#theme_dark}
-<a id="example-61d9666" />
+<a id="example-b84ecba" />
 
 
 ```julia
 with_theme(demofigure, theme_dark())
 ```
 
-<img src="./61d9666.png" width="600px" height="450px"/>
+<img src="./b84ecba.png" width="600px" height="450px"/>
 
 
 ## theme_latexfonts {#theme_latexfonts}
 
 See also [more general documentation on Makie and LaTeX](/explanations/latex#LaTeX).
-<a id="example-3fc7cdc" />
+<a id="example-9b9124c" />
 
 
 ```julia
 with_theme(demofigure, theme_latexfonts())
 ```
 
-<img src="./3fc7cdc.png" width="600px" height="450px"/>
+<img src="./9b9124c.png" width="600px" height="450px"/>
 

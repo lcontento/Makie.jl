@@ -29,7 +29,7 @@ The first recipe we want to teach Makie to draw is `BarPlot()`. As we allured to
 Makie.convert_arguments(P::Type{<:BarPlot}, h::MyHist) = convert_arguments(P, h.bincenters, h.bincounts)
 ```
 
-<a id="example-21a780b" />
+<a id="example-7adcf5d" />
 
 
 ```julia
@@ -38,7 +38,7 @@ h = MyHist([1, 10, 100], 1:3)
 barplot(h)
 ```
 
-<img src="./21a780b.png" width="600px" height="450px"/>
+<img src="./7adcf5d.png" width="600px" height="450px"/>
 
 
 ## Hist recipe – override `Makie.plot!` {#Hist-recipe-–-override-Makie.plot!}
@@ -46,7 +46,7 @@ barplot(h)
 The second recipe we want to customize for our `MyHist` type is the `Hist()` recipe. This cannot be achieved by `convert_arguments` as we did for `BarPlot()`, because normally `Makie.hist()` takes raw data as input, but we already have the binned data in our `MyHist` type.
 
 The first thing one might try is to override the `plot!` method for `Hist` recipe:
-<a id="example-5bd15df" />
+<a id="example-b4de159" />
 
 
 ```julia
@@ -58,11 +58,11 @@ h = MyHist([1, 10, 100], 1:3)
 hist(h; color=:red, direction=:x)
 ```
 
-<img src="./5bd15df.png" width="600px" height="450px"/>
+<img src="./b4de159.png" width="600px" height="450px"/>
 
 
 This almost works, but we see that the keyword arguments are not passed to the `barplot!` function. To handle these attributes properly, we need to override/merge the default attributes of the underlying plot type (in this case, `BarPlot`) with the user-passed attributes. Since Makie 0.21, `shared_attributes` was introduced for this use case, which extracts all valid attributes for the target plot type:
-<a id="example-1e2fb07" />
+<a id="example-7764ff8" />
 
 
 ```julia
@@ -75,5 +75,5 @@ h = MyHist([1, 10, 100], 1:3)
 hist(h; color=:red, direction=:x)
 ```
 
-<img src="./1e2fb07.png" width="600px" height="450px"/>
+<img src="./7764ff8.png" width="600px" height="450px"/>
 

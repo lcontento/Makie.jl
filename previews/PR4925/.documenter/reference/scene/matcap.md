@@ -4,7 +4,7 @@
 A matcap (material capture) is a texture which is applied based on the normals of a given mesh. They typically include complex materials and lighting and offer a cheap way to apply those to any mesh. You may pass a matcap via the `matcap` attribute of a `mesh`, `meshscatter` or `surface` plot. Setting `shading = NoShading` is suggested. You can find a lot matcaps [here](https://github.com/nidorx/matcaps).
 
 ## Example {#Example}
-<a id="example-e71ff06" />
+<a id="example-52b51a0" />
 
 
 ```julia
@@ -23,5 +23,5 @@ mesh(catmesh, matcap=gold, shading = NoShading)
 └ @ MeshIO ~/.julia/packages/MeshIO/jBkmz/src/io/obj.jl:157
 ```
 
-<img src="./e71ff06.png" width="600px" height="450px"/>
+<img src="./52b51a0.png" width="600px" height="450px"/>
 

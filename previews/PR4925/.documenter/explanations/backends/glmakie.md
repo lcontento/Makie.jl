@@ -75,7 +75,7 @@ The keyword arguments below are not effective if `renderloop` isn&#39;t set to `
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/GLMakie/src/screen.jl#L127-L136" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/GLMakie/src/screen.jl#L127-L136" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

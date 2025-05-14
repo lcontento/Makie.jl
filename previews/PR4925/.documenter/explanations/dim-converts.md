@@ -6,7 +6,7 @@ Starting with Makie v0.21, support for types like units, categorical values and 
 ## Examples {#Examples}
 
 The basic usage is as easy as replacing numbers with any supported type, e.g. `Dates.Second`:
-<a id="example-500d7d4" />
+<a id="example-a402480" />
 
 
 ```julia
@@ -16,11 +16,11 @@ using CairoMakie, Makie.Dates, Makie.Unitful
 f, ax, pl = scatter(rand(Second(1):Second(60):Second(20*60), 10))
 ```
 
-<img src="./500d7d4.png" width="600px" height="450px"/>
+<img src="./a402480.png" width="600px" height="450px"/>
 
 
 Once an axis dimension is set to a certain unit, one must plot into that axis with compatible units. So e.g. hours work, since they&#39;re compatible with the unitful conversion:
-<a id="example-ad3b722" />
+<a id="example-670b138" />
 
 
 ```julia
@@ -30,7 +30,7 @@ scatter!(ax, LinRange(0u"yr", 0.1u"yr", 5))
 f
 ```
 
-<img src="./ad3b722.png" width="600px" height="450px"/>
+<img src="./670b138.png" width="600px" height="450px"/>
 
 
 Note that the units displayed in ticks will adjust to the given range of values.
@@ -118,7 +118,7 @@ barplot(Named.([:a, :b, :c]), 1:3, axis=(dim1_conversion=conversion,))
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/src/dim-converts/categorical-integration.jl#L1-L26" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/src/dim-converts/categorical-integration.jl#L1-L26" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -159,7 +159,7 @@ scatter(1:4, [0.01u"km", 0.02u"km", 0.03u"km", 0.04u"km"]; axis=(dim2_conversion
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/src/dim-converts/unitful-integration.jl#L121-L145" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/src/dim-converts/unitful-integration.jl#L121-L145" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -197,7 +197,7 @@ scatter(1:4, (1:4) .* u"s", axis=(dim2_conversion=conversion,))
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/src/dim-converts/dates-integration.jl#L20-L44" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/src/dim-converts/dates-integration.jl#L20-L44" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -205,7 +205,7 @@ scatter(1:4, (1:4) .* u"s", axis=(dim2_conversion=conversion,))
 ## Developer docs {#Developer-docs}
 
 You can overload the API to define your own dim converts by overloading the following functions:
-<a id="example-f096204" />
+<a id="example-4f0b410" />
 
 
 ```julia
@@ -265,7 +265,7 @@ end
 barplot([MyUnit(1), MyUnit(2), MyUnit(3)], 1:3)
 ```
 
-<img src="./f096204.png" width="600px" height="450px"/>
+<img src="./4f0b410.png" width="600px" height="450px"/>
 
 
 For more complex examples, you should look at the implementation in: `Makie/src/dim-converts`.

@@ -31,7 +31,7 @@ Sets CairoMakie as the currently active backend and also allows to quickly set t
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/CairoMakie/src/screen.jl#L130-L139" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/CairoMakie/src/screen.jl#L130-L139" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -61,7 +61,7 @@ For example, if your Scene&#39;s size is `(800, 600)`, by setting `scale=2`, the
 You can deactivate this rasterization by setting `plt.rasterize = false`.
 
 Example:
-<a id="example-e7fddd7" />
+<a id="example-413cc14" />
 
 
 ```julia
@@ -70,11 +70,11 @@ v = rand(10,2)
 scatter(v[:,1], v[:,2], rasterize = true, markersize = 30.0)
 ```
 
-<img src="./e7fddd7.svg" width="600px" height="450px"/>
+<img src="./413cc14.svg" width="600px" height="450px"/>
 
 
 If you zoom in, you will see a pretty badly pixelated image - this is because the rasterization density is set to 1 `px` per `pt`.  Setting `rasterize=10` makes this a lot smoother:
-<a id="example-d95fa5d" />
+<a id="example-37d4c98" />
 
 
 ```julia
@@ -83,7 +83,7 @@ v = rand(10,2)
 scatter(v[:,1], v[:,2], rasterize = 10, markersize = 30.0)
 ```
 
-<img src="./d95fa5d.svg" width="600px" height="450px"/>
+<img src="./37d4c98.svg" width="600px" height="450px"/>
 
 
 #### PDF version {#PDF-version}

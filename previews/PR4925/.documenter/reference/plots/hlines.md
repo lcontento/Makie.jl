@@ -17,11 +17,11 @@ Create horizontal lines across a `Scene` with 2D projection. The lines will be p
 The plot type alias for the `hlines` function is `HLines`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L598" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L598" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
-<a id="example-e67028d" />
+<a id="example-4a2558d" />
 
 
 ```julia
@@ -29,7 +29,7 @@ using CairoMakie
 hlines([1, 2, 3])
 ```
 
-<img src="./e67028d.png" width="600px" height="450px"/>
+<img src="./4a2558d.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

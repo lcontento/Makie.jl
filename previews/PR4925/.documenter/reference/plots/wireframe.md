@@ -19,13 +19,13 @@ Draws a wireframe, either interpreted as a surface or as a mesh.
 The plot type alias for the `wireframe` function is `Wireframe`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L594" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L594" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-e193d5b" />
+<a id="example-355f393" />
 
 
 ```julia
@@ -36,7 +36,7 @@ z = [sinc(√(X^2 + Y^2) / π) for X ∈ x, Y ∈ y]
 wireframe(x, y, z, axis=(type=Axis3,), color=:black)
 ```
 
-<img src="./e193d5b.png" width="600px" height="450px"/>
+<img src="./355f393.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

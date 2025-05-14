@@ -28,13 +28,13 @@ If you want to plot intervals from low to high values instead of relative errors
 The plot type alias for the `errorbars` function is `Errorbars`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L602" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L602" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-c2588bc" />
+<a id="example-236e6b4" />
 
 
 ```julia
@@ -60,9 +60,9 @@ axislegend(merge=true)
 f
 ```
 
-<img src="./c2588bc.png" width="600px" height="450px"/>
+<img src="./236e6b4.png" width="600px" height="450px"/>
 
-<a id="example-339d130" />
+<a id="example-8f5c5ee" />
 
 
 ```julia
@@ -86,9 +86,9 @@ scatter!(xs, ys, markersize = 3, color = :black)
 f
 ```
 
-<img src="./339d130.png" width="600px" height="450px"/>
+<img src="./8f5c5ee.png" width="600px" height="450px"/>
 
-<a id="example-7ad5546" />
+<a id="example-d16a58d" />
 
 
 ```julia
@@ -110,7 +110,7 @@ scatter!(xs, ys, markersize = 3, color = :black)
 f
 ```
 
-<img src="./7ad5546.png" width="600px" height="450px"/>
+<img src="./d16a58d.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

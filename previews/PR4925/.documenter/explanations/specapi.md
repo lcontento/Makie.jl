@@ -52,7 +52,7 @@ axis = Makie.BlockSpec(:Axis; title="Axis at layout position (1, 1)")
 ## Building layouts for specs {#Building-layouts-for-specs}
 
 To build layouts quickly, you can pass column vectors, row vectors or matrices of block specs to `S.GridLayout`. If you need more control over the layout, you can specify row and column sizes and gaps directly.
-<a id="example-61b3514" />
+<a id="example-c01cf22" />
 
 
 ```julia
@@ -86,13 +86,13 @@ spec_row = S.GridLayout([spec_column_vector spec_matrix], colsizes = [Auto(), Au
 f, ax, pl = plot(S.GridLayout(spec_row); figure = (; fontsize = 10))
 ```
 
-<img src="./61b3514.png" width="600px" height="450px"/>
+<img src="./c01cf22.png" width="600px" height="450px"/>
 
 
 ## Advanced spec layouting {#Advanced-spec-layouting}
 
 If you need even more control, you can pass the position of each object in your layout to `S.GridLayout` directly. These positions are specified as a tuple of `(rows, columns [, side])` where `side` is `Inside()` by default. For `rows` and `columns` you can either use integers like `2`, ranges like `1:3` or the colon operator `:` which spans across all rows or columns that are specified for other elements. Rows and columns start at `1` by default but you can also use numbers lower than `1` if necessary.
-<a id="example-7e7b7d3" />
+<a id="example-d792b4f" />
 
 
 ```julia
@@ -114,11 +114,11 @@ plot(
 )
 ```
 
-<img src="./7e7b7d3.png" width="600px" height="450px"/>
+<img src="./d792b4f.png" width="600px" height="450px"/>
 
 
 You can also use manual positions with nested `GridLayout`s.
-<a id="example-20dca3a" />
+<a id="example-89c7d40" />
 
 
 ```julia
@@ -132,7 +132,7 @@ plot(S.GridLayout([
 ]))
 ```
 
-<img src="./20dca3a.png" width="600px" height="450px"/>
+<img src="./89c7d40.png" width="600px" height="450px"/>
 
 
 Here are all the keyword arguments that `S.GridLayout` accepts.
@@ -153,7 +153,7 @@ S.GridLayout([...],
 
 
 Axis links are also supported, but they&#39;re not part of Axis, but rather the surrounding `GridLayout`, since when constructing the axis you usually don&#39;t yet have the other Axes you want to link them to.
-<a id="example-9bbdd69" />
+<a id="example-f4f4c43" />
 
 
 ```julia
@@ -175,7 +175,7 @@ end
 f
 ```
 
-<img src="./9bbdd69.png" width="600px" height="450px"/>
+<img src="./f4f4c43.png" width="600px" height="450px"/>
 
 
 ## Using specs in `convert_arguments` {#Using-specs-in-convert_arguments}
@@ -191,7 +191,7 @@ You can overload `convert_arguments` and return an array of `PlotSpecs` or a `Gr
 ## `convert_arguments` for `GridLayoutSpec` {#convert_arguments-for-GridLayoutSpec}
 
 In this example, we overload `convert_arguments` for a custom type to create facet grids easily.
-<a id="example-7af0a8c" />
+<a id="example-d6a621c" />
 
 
 ```julia
@@ -222,11 +222,11 @@ end
 plot(PlotGrid((3, 4)))
 ```
 
-<img src="./7af0a8c.png" width="600px" height="450px"/>
+<img src="./d6a621c.png" width="600px" height="450px"/>
 
 
 We can also plot into existing `Figure`s with our new `plot` method:
-<a id="example-cb65965" />
+<a id="example-273051f" />
 
 
 ```julia
@@ -236,7 +236,7 @@ plot(f[1, 2], PlotGrid((3, 2)); color=Cycled(2))
 f
 ```
 
-<img src="./cb65965.png" width="600px" height="450px"/>
+<img src="./273051f.png" width="600px" height="450px"/>
 
 
 ## `convert_arguments` for `PlotSpec`s {#convert_arguments-for-PlotSpecs}
@@ -244,7 +244,7 @@ f
 We can return a vector of `PlotSpec`s from `convert_arguments` which allows us to dynamically choose the plot objects we want to add given the input data. While you could choose plot types based on input data with the old recipe API as well, this did not easily work for observable updates that changed these plot types in an existing figure. For this, users had to do tedious manual bookkeeping which is now abstracted away.
 
 Note, that this method currently doesn&#39;t allow to forward keyword arguments from the `plot` command to `convert_arguments`, so we put the plot arguments into the `LineScatter` object in the following example:
-<a id="example-c95ec49" />
+<a id="example-1ffeeb2" />
 
 
 ```julia
@@ -285,7 +285,7 @@ plot(f[1, 2], CustomMatrix(data, style = :contourf, colormap = :inferno))
 f
 ```
 
-<img src="./c95ec49.png" width="600px" height="450px"/>
+<img src="./1ffeeb2.png" width="600px" height="450px"/>
 
 
 ## Interactive example {#Interactive-example}

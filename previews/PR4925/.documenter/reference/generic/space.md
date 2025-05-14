@@ -12,7 +12,7 @@ The `space` attribute declares which coordinate system the plot is in with respe
   
 - `space = :clip`: The plot is in a -1..1 normalized space.
   
-<a id="example-4906376" />
+<a id="example-a4db380" />
 
 
 ```julia
@@ -42,13 +42,13 @@ text!(a, Point2f(0, 0.1), text = "(0, 0.1) in clip space", space = :clip; text_k
 f
 ```
 
-<img src="./4906376.png" width="600px" height="450px"/>
+<img src="./a4db380.png" width="600px" height="450px"/>
 
 
 ## markerspace {#markerspace}
 
 A few plots also allow you to set a `markerspace`. In these cases the projections are split up into two steps. The first projects plot arguments from `space` to `markerspace`. There the projected arguments get merged with other data. In scatter for example, each projected position gets expanded to quad whose size, position and orientation are based on the `markersize`, `marker_offset` and `rotation` attributes. The result then continues to get projected as need to be displayed. What `markerspace` does, is allow you to choose which coordinate system attributes like `markersize` etc apply. The options here are the same as with `space`.
-<a id="example-c5eacad" />
+<a id="example-1c806fe" />
 
 
 ```julia
@@ -79,5 +79,5 @@ text!(a, Point2f(-7, -7), text = "world space w/ markersize = 2"; text_kwargs...
 f
 ```
 
-<img src="./c5eacad.png" width="600px" height="450px"/>
+<img src="./1c806fe.png" width="600px" height="450px"/>
 

@@ -159,7 +159,7 @@ If we look at our target figure, we can imagine one box around each of the label
 We could say that A and B are in one column, and C and D are in one column. We can have different row heights for both groups by making one big nested `GridLayout` within the second column, in which we place C and D. This way the rows of column 2 are decoupled from column 1.
 
 Ok, let&#39;s create the figure first with a gray backgroundcolor, and a predefined font:
-<a id="example-cd48473" />
+<a id="example-267d760" />
 
 
 ```julia
@@ -170,7 +170,7 @@ f = Figure(backgroundcolor = RGBf(0.98, 0.98, 0.98),
     size = (1000, 700))
 ```
 
-<img src="./cd48473.png" width="1000px" height="700px"/>
+<img src="./267d760.png" width="1000px" height="700px"/>
 
 
 ## Setting up GridLayouts {#Setting-up-GridLayouts}
@@ -197,7 +197,7 @@ gd = gcd[2, 1] = GridLayout()
 Now we can start placing objects into the figure. We start with A.
 
 There are three axes and a legend. We can place the axes first, link them appropriately, and plot the first data into them.
-<a id="example-e1f839c" />
+<a id="example-3b2e2e6" />
 
 
 ```julia
@@ -220,11 +220,11 @@ end
 f
 ```
 
-<img src="./e1f839c.png" width="1000px" height="700px"/>
+<img src="./3b2e2e6.png" width="1000px" height="700px"/>
 
 
 There&#39;s a small gap between the density plots and their axes, which we can remove by fixing one side of the limits.
-<a id="example-4bfddff" />
+<a id="example-ba06eb5" />
 
 
 ```julia
@@ -234,11 +234,11 @@ xlims!(axright, low = 0)
 f
 ```
 
-<img src="./4bfddff.png" width="1000px" height="700px"/>
+<img src="./ba06eb5.png" width="1000px" height="700px"/>
 
 
 We can also choose different x ticks with whole numbers.
-<a id="example-6a6a387" />
+<a id="example-c39fa90" />
 
 
 ```julia
@@ -248,13 +248,13 @@ axtop.xticks = 0:3:9
 f
 ```
 
-<img src="./6a6a387.png" width="1000px" height="700px"/>
+<img src="./c39fa90.png" width="1000px" height="700px"/>
 
 
 ### Legend {#Legend}
 
 We have set the `label` attribute in the scatter call so it&#39;s easier to construct the legend. We can just pass `axmain` as the second argument to `Legend`.
-<a id="example-bd48d05" />
+<a id="example-167e87d" />
 
 
 ```julia
@@ -263,7 +263,7 @@ leg = Legend(ga[1, 2], axmain)
 f
 ```
 
-<img src="./bd48d05.png" width="1000px" height="700px"/>
+<img src="./167e87d.png" width="1000px" height="700px"/>
 
 
 ### Legend Tweaks {#Legend-Tweaks}
@@ -271,7 +271,7 @@ f
 There are a couple things we want to change. There are unnecessary decorations for the side axes, which we are going to hide.
 
 Also, the top axis does not have the same height as the legend. That&#39;s because a legend is usually used on the right of an `Axis` and is therefore preset with `tellheight = false`. We set this attribute to `true` so the row in which the legend sits can contract to its known size.
-<a id="example-15687ff" />
+<a id="example-6e9db15" />
 
 
 ```julia
@@ -282,11 +282,11 @@ leg.tellheight = true
 f
 ```
 
-<img src="./15687ff.png" width="1000px" height="700px"/>
+<img src="./6e9db15.png" width="1000px" height="700px"/>
 
 
 The axes are still a bit too far apart, so we reduce column and row gaps.
-<a id="example-796440d" />
+<a id="example-d26fad9" />
 
 
 ```julia
@@ -296,11 +296,11 @@ rowgap!(ga, 10)
 f
 ```
 
-<img src="./796440d.png" width="1000px" height="700px"/>
+<img src="./d26fad9.png" width="1000px" height="700px"/>
 
 
 We can make a title by placing a label across the top two elements.
-<a id="example-ff7e2ac" />
+<a id="example-58b4077" />
 
 
 ```julia
@@ -311,13 +311,13 @@ Label(ga[1, 1:2, Top()], "Stimulus ratings", valign = :bottom,
 f
 ```
 
-<img src="./ff7e2ac.png" width="1000px" height="700px"/>
+<img src="./58b4077.png" width="1000px" height="700px"/>
 
 
 ## Panel B {#Panel-B}
 
 Let&#39;s move to B. We have two axes stacked on top of each other, and a colorbar alongside them. This time, we create the axes by just plotting into the right `GridLayout` slots. This can be more convenient than creating an `Axis` first.
-<a id="example-a0fad54" />
+<a id="example-fa2f98c" />
 
 
 ```julia
@@ -339,13 +339,13 @@ contour!(ax2, xs, ys, data2, levels = 5, color = :black)
 f
 ```
 
-<img src="./a0fad54.png" width="1000px" height="700px"/>
+<img src="./fa2f98c.png" width="1000px" height="700px"/>
 
 
 ### Colorbar {#Colorbar}
 
 Now we need a colorbar. Because we haven&#39;t set specific edges for the two contour plots, just how many levels there are, we can make a colorbar using one of the contour plots and then label the bins in there from one to six.
-<a id="example-3762a53" />
+<a id="example-909c802" />
 
 
 ```julia
@@ -358,7 +358,7 @@ cb.ticks = (centers, string.(1:6))
 f
 ```
 
-<img src="./3762a53.png" width="1000px" height="700px"/>
+<img src="./909c802.png" width="1000px" height="700px"/>
 
 
 #### Mixed alignmode {#Mixed-alignmode}
@@ -366,7 +366,7 @@ f
 The right edge of the colorbar is currently aligned with the right edge of the upper density plot. This can later cause a bit of a gap between the density plot and content on the right.
 
 In order to improve this, we can pull the colorbar labels into its layout cell using the `Mixed` alignmode. The keyword `right = 0` means that the right side of the colorbar should pull its protrusion content inward with an additional padding of `0`.
-<a id="example-3e3b867" />
+<a id="example-ac3b42a" />
 
 
 ```julia
@@ -375,11 +375,11 @@ cb.alignmode = Mixed(right = 0)
 f
 ```
 
-<img src="./3e3b867.png" width="1000px" height="700px"/>
+<img src="./ac3b42a.png" width="1000px" height="700px"/>
 
 
 As in A, the axes are a bit too far apart.
-<a id="example-7b59c62" />
+<a id="example-d484fbe" />
 
 
 ```julia
@@ -389,13 +389,13 @@ rowgap!(gb, 10)
 f
 ```
 
-<img src="./7b59c62.png" width="1000px" height="700px"/>
+<img src="./d484fbe.png" width="1000px" height="700px"/>
 
 
 ## Panel C {#Panel-C}
 
 Now, we move on to panel C. This is just an `Axis3` with a colorbar on the side.
-<a id="example-8b0a2e5" />
+<a id="example-e4355ab" />
 
 
 ```julia
@@ -413,7 +413,7 @@ Colorbar(gc[1, 2], m, label = "BOLD level")
 f
 ```
 
-<img src="./8b0a2e5.png" width="1000px" height="700px"/>
+<img src="./e4355ab.png" width="1000px" height="700px"/>
 
 
 Note that the z label overlaps the plot to the left a little bit. `Axis3` can&#39;t have automatic protrusions because the label positions change with the projection and the cell size of the axis, which is different from the 2D `Axis`.
@@ -423,7 +423,7 @@ You can set the attribute `ax3.protrusions` to a tuple of four values (left, rig
 ## Panel D {#Panel-D}
 
 We move on to Panel D, which has a grid of 3x2 axes.
-<a id="example-d119107" />
+<a id="example-2a42919" />
 
 
 ```julia
@@ -445,11 +445,11 @@ axs[3, 2].xlabel = "Day 2"
 f
 ```
 
-<img src="./d119107.png" width="1000px" height="700px"/>
+<img src="./2a42919.png" width="1000px" height="700px"/>
 
 
 We can make a little title for the six axes by placing a `Label` in the top protrusion of row 1 and across both columns.
-<a id="example-f32a9fc" />
+<a id="example-4c7f954" />
 
 
 ```julia
@@ -460,11 +460,11 @@ Label(gd[1, :, Top()], "EEG traces", valign = :bottom,
 f
 ```
 
-<img src="./f32a9fc.png" width="1000px" height="700px"/>
+<img src="./4c7f954.png" width="1000px" height="700px"/>
 
 
 Again, we bring the subplots closer together by reducing gap sizes.
-<a id="example-3c65822" />
+<a id="example-95909d3" />
 
 
 ```julia
@@ -474,13 +474,13 @@ colgap!(gd, 10)
 f
 ```
 
-<img src="./3c65822.png" width="1000px" height="700px"/>
+<img src="./95909d3.png" width="1000px" height="700px"/>
 
 
 ### EEG labels {#EEG-labels}
 
 Now, we add three boxes on the side with labels in them. In this case, we just place them in another column to the right.
-<a id="example-58e4329" />
+<a id="example-5983759" />
 
 
 ```julia
@@ -492,11 +492,11 @@ end
 f
 ```
 
-<img src="./58e4329.png" width="1000px" height="700px"/>
+<img src="./5983759.png" width="1000px" height="700px"/>
 
 
 The boxes are in the correct positions, but we still need to remove the column gap.
-<a id="example-5ac8451" />
+<a id="example-b3c83c7" />
 
 
 ```julia
@@ -505,13 +505,13 @@ colgap!(gd, 2, 0)
 f
 ```
 
-<img src="./5ac8451.png" width="1000px" height="700px"/>
+<img src="./b3c83c7.png" width="1000px" height="700px"/>
 
 
 ### Scaling axes relatively {#Scaling-axes-relatively}
 
 The fake EEG data we have created has more datapoints on day 2 than day 1. We want to scale the axes so that they both have the same zoom level. We can do this by setting the column widths to `Auto(x)` where x is a number proportional to the number of data points of the axis. This way, both will have the same relative scaling.
-<a id="example-6ca48dc" />
+<a id="example-dacf354" />
 
 
 ```julia
@@ -524,13 +524,13 @@ colsize!(gd, 2, Auto(n_day_2))
 f
 ```
 
-<img src="./6ca48dc.png" width="1000px" height="700px"/>
+<img src="./dacf354.png" width="1000px" height="700px"/>
 
 
 ## Subplot labels {#Subplot-labels}
 
 Now, we can add the subplot labels. We already have our four `GridLayout` objects that enclose each panel&#39;s content, so the easiest way is to create `Label`s in the top left protrusion of these layouts. That will leave all other alignments intact, because we&#39;re not creating any new columns or rows. The labels belong to the gaps between the layouts instead.
-<a id="example-4754b86" />
+<a id="example-a07f839" />
 
 
 ```julia
@@ -545,7 +545,7 @@ end
 f
 ```
 
-<img src="./4754b86.png" width="1000px" height="700px"/>
+<img src="./a07f839.png" width="1000px" height="700px"/>
 
 
 ## Final tweaks {#Final-tweaks}
@@ -553,7 +553,7 @@ f
 This looks pretty good already, but the first column of the layout is a bit too wide. We can reduce the column width by setting it to `Auto` with a number smaller than 1, for example. This gives the column a smaller weight when distributing widths between all columns with `Auto` sizes.
 
 You can also use `Relative` or `Fixed` but they are not as flexible if you add more things later, so I prefer using `Auto`.
-<a id="example-767ed3c" />
+<a id="example-cfa917f" />
 
 
 ```julia
@@ -562,13 +562,13 @@ colsize!(f.layout, 1, Auto(0.5))
 f
 ```
 
-<img src="./767ed3c.png" width="1000px" height="700px"/>
+<img src="./cfa917f.png" width="1000px" height="700px"/>
 
 
 The EEG traces are currently as high as the brain axis, let&#39;s increase the size of the row with the panel C layout a bit so it has more space.
 
 And that is the final result:
-<a id="example-ea7f5ff" />
+<a id="example-43d3f8a" />
 
 
 ```julia
@@ -577,5 +577,5 @@ rowsize!(gcd, 1, Auto(1.5))
 f
 ```
 
-<img src="./ea7f5ff.png" width="1000px" height="700px"/>
+<img src="./43d3f8a.png" width="1000px" height="700px"/>
 

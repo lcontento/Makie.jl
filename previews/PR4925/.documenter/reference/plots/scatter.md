@@ -19,7 +19,7 @@ Plots a marker for each element in `(x, y, z)`, `(x, y)`, or `positions`.
 The plot type alias for the `scatter` function is `Scatter`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L617" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L617" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -29,7 +29,7 @@ The plot type alias for the `scatter` function is `Scatter`.
 ### Using x and y vectors {#Using-x-and-y-vectors}
 
 Scatters can be constructed by passing a list of x and y coordinates.
-<a id="example-aaa6aa5" />
+<a id="example-3c6e848" />
 
 
 ```julia
@@ -40,7 +40,7 @@ ys = 0.5 .* sin.(xs)
 scatter(xs, ys)
 ```
 
-<img src="./aaa6aa5.png" width="600px" height="450px"/>
+<img src="./3c6e848.png" width="600px" height="450px"/>
 
 
 ### Using points {#Using-points}
@@ -48,7 +48,7 @@ scatter(xs, ys)
 It is also possible to pass coordinates as a vector of points, which is preferred if the coordinates should be updated later, to avoid different lengths of x and y.
 
 Attributes like `color` and `markersize` can be set in scalar or vector form. If you pass a vector of numbers for `color`, the attribute `colorrange` which is by default automatically equal to the extrema of the color values, decides how colors are looked up in the `colormap`.
-<a id="example-cc56582" />
+<a id="example-258c236" />
 
 
 ```julia
@@ -61,7 +61,7 @@ scatter(points, color = 1:30, markersize = range(5, 30, length = 30),
     colormap = :thermal)
 ```
 
-<img src="./cc56582.png" width="600px" height="450px"/>
+<img src="./258c236.png" width="600px" height="450px"/>
 
 
 ### Markers {#Markers}
@@ -81,7 +81,7 @@ There are a couple different categories of markers you can use with `scatter`:
 #### Default markers {#Default-markers}
 
 Here is an example plot showing different shapes that are accessible by `Symbol`s, as well as a few characters.
-<a id="example-f3580b4" />
+<a id="example-4c78907" />
 
 
 ```julia
@@ -129,7 +129,7 @@ end
 f
 ```
 
-<img src="./f3580b4.png" width="600px" height="450px"/>
+<img src="./4c78907.png" width="600px" height="450px"/>
 
 
 #### Markersize {#Markersize}
@@ -137,7 +137,7 @@ f
 The `markersize` attribute scales the scatter size relative to the scatter marker&#39;s base size. Therefore, `markersize` cannot be directly understood in terms of a unit like `px`, it depends on _what_ is scaled.
 
 For `Char` markers, `markersize` is equivalent to the font size when displaying the same characters using `text`.
-<a id="example-fa0640a" />
+<a id="example-5dbb474" />
 
 
 ```julia
@@ -148,11 +148,11 @@ xlims!(ax, -1, 4)
 f
 ```
 
-<img src="./fa0640a.png" width="600px" height="450px"/>
+<img src="./5dbb474.png" width="600px" height="450px"/>
 
 
 The default `BezierPath` markers like `:circle`, `:rect`, `:utriangle`, etc. have been chosen such that they approximately match `Char` markers of the same markersize. This makes it easier to switch out markers without the overall look changing too much. However, both `Char` and `BezierPath` markers are not exactly `markersize` high or wide. We can visualize this by plotting some `Char`s, `BezierPath`s, `Circle` and `Rect` in front of a line of width `50`. You can see that only the special markers `Circle` and `Rect` match the line width because their base size is 1 x 1, however they don&#39;t match the `Char`s or `BezierPath`s very well.
-<a id="example-c067132" />
+<a id="example-198809f" />
 
 
 ```julia
@@ -164,13 +164,13 @@ end
 f
 ```
 
-<img src="./c067132.png" width="600px" height="450px"/>
+<img src="./198809f.png" width="600px" height="450px"/>
 
 
 If you need a marker that has some exact base size, so that you can match it with lines or other plot objects of known size, or because you want to use the marker in data space, you can construct it yourself using `BezierPath` or `Polygon`. A marker with a base size of 1 x 1, e.g., will be scaled like `lines` when `markersize` and `linewidth` are the same, just like `Circle` and `Rect` markers.
 
 Here, we construct a hexagon polygon with radius `1`, which we can then use to tile a surface in data coordinates by setting `markerspace = :data`.
-<a id="example-d446cda" />
+<a id="example-2d7c294" />
 
 
 ```julia
@@ -187,7 +187,7 @@ scatter(points,
     axis = (; aspect = 1, limits = (-2, 4, -2, 4)))
 ```
 
-<img src="./d446cda.png" width="600px" height="450px"/>
+<img src="./2d7c294.png" width="600px" height="450px"/>
 
 
 ### Bezier path markers {#Bezier-path-markers}
@@ -203,7 +203,7 @@ Unfilled markers (like a single line or curve) are possible in CairoMakie but no
 :::
 
 Here is an example with a simple arrow that is centered on its tip, built from path elements.
-<a id="example-367ad6d" />
+<a id="example-8f9aa6b" />
 
 
 ```julia
@@ -227,13 +227,13 @@ scatter(1:5,
 )
 ```
 
-<img src="./367ad6d.png" width="600px" height="450px"/>
+<img src="./8f9aa6b.png" width="600px" height="450px"/>
 
 
 #### Holes {#Holes}
 
 Paths can have holes, just start a new subpath with `MoveTo` that is inside the main path. The holes have to be in clockwise direction if the outside is in anti-clockwise direction, or vice versa. For example, a circle with a square cut out can be made by one `EllipticalArc` that goes anticlockwise, and a square inside which goes clockwise:
-<a id="example-7141de2" />
+<a id="example-d4f7230" />
 
 
 ```julia
@@ -254,7 +254,7 @@ scatter(1:5,
 )
 ```
 
-<img src="./7141de2.png" width="600px" height="450px"/>
+<img src="./d4f7230.png" width="600px" height="450px"/>
 
 
 #### Construction from svg path strings {#Construction-from-svg-path-strings}
@@ -262,7 +262,7 @@ scatter(1:5,
 You can also create a bezier path from an [svg path specification string](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d#path_commands). You can automatically resize the path and flip the y- and x-axes (svgs usually have a coordinate system where y increases downwards) with the keywords `fit`, `flipy`, and `flipx`. By default, the bounding box for the fitted path is a square of width 1 centered on zero. You can pass a different bounding `Rect` with the `bbox` keyword argument. By default, the aspect of the path is left intact, and if it&#39;s not matching the new bounding box, the path is centered so it fits inside. Set `keep_aspect = false` to squeeze the path into the bounding box, disregarding its original aspect ratio.
 
 Here&#39;s an example with an svg string that contains the bat symbol:
-<a id="example-ef15ce0" />
+<a id="example-4837228" />
 
 
 ```julia
@@ -274,7 +274,7 @@ batsymbol = BezierPath(batsymbol_string, fit = true, flipy = true)
 scatter(1:10, marker = batsymbol, markersize = 50, color = :black)
 ```
 
-<img src="./ef15ce0.png" width="600px" height="450px"/>
+<img src="./4837228.png" width="600px" height="450px"/>
 
 
 ### Polygon markers {#Polygon-markers}
@@ -282,7 +282,7 @@ scatter(1:10, marker = batsymbol, markersize = 50, color = :black)
 One can also use `GeometryBasics.Polgyon` as a marker. A polygon always needs one vector of points which forms the outline. It can also take an optional vector of vectors of points, each of which forms a hole in the outlined shape.
 
 In this example, a small circle is cut out of a larger circle:
-<a id="example-32b5224" />
+<a id="example-8bea31b" />
 
 
 ```julia
@@ -293,13 +293,13 @@ p_small = decompose(Point2f, Circle(Point2f(0), 0.5))
 scatter(1:4, fill(0, 4), marker=Polygon(p_big, [p_small]), markersize=100, color=1:4, axis=(limits=(0, 5, -1, 1),))
 ```
 
-<img src="./32b5224.png" width="600px" height="450px"/>
+<img src="./8bea31b.png" width="600px" height="450px"/>
 
 
 ### Vec markersize {#Vec-markersize}
 
 You can scale x and y dimension of markers separately by passing a `Vec`.
-<a id="example-5567812" />
+<a id="example-ae87169" />
 
 
 ```julia
@@ -321,13 +321,13 @@ end
 f
 ```
 
-<img src="./5567812.png" width="600px" height="450px"/>
+<img src="./ae87169.png" width="600px" height="450px"/>
 
 
 ### Marker space {#Marker-space}
 
 By default marker sizes are given in pixel units. You can change this by adjusting `markerspace`. For example, you can have a marker scaled in data units by setting `markerspace = :data`.
-<a id="example-eb1302b" />
+<a id="example-5169cc5" />
 
 
 ```julia
@@ -346,11 +346,11 @@ axislegend(ax)
 f
 ```
 
-<img src="./eb1302b.png" width="600px" height="450px"/>
+<img src="./5169cc5.png" width="600px" height="450px"/>
 
 
 ### Airport locations example {#Airport-locations-example}
-<a id="example-bdb0dba" />
+<a id="example-197168b" />
 
 
 ```julia
@@ -364,7 +364,7 @@ scatter(a[1:50:end, :], marker = '✈',
     markersize = 20, color = :black)
 ```
 
-<img src="./bdb0dba.png" width="600px" height="450px"/>
+<img src="./197168b.png" width="600px" height="450px"/>
 
 
 ### Dealing with outline artifacts in GLMakie {#Dealing-with-outline-artifacts-in-GLMakie}
@@ -378,7 +378,7 @@ In GLMakie 3D scatter plots can generate outline artifacts depending on the orde
   
 - `depthsorting = true` will sort markers by depth before rendering to fix the issue. This only works within a plot call, so when other plots are involved the issue may reappear.
   
-<a id="example-f833109" />
+<a id="example-54087c4" />
 
 
 ```julia
@@ -404,7 +404,7 @@ mesh!(Rect3f(Point3f(0), Vec3f(0.9, 0.9, 0.9)), color = :orange)
 f
 ```
 
-<img src="./f833109.png" width="900px" height="650px"/>
+<img src="./54087c4.png" width="900px" height="650px"/>
 
 
 ## Attributes {#Attributes}
@@ -426,7 +426,7 @@ Clip planes offer a way to do clipping in 3D space. You can set a Vector of up t
 Defaults to `@inherit markercolor`
 
 Sets the color of the marker. If no color is set, multiple calls to `scatter!` will cycle through the axis color palette.
-<a id="example-1d4009a" />
+<a id="example-790083f" />
 
 
 ```julia
@@ -440,7 +440,7 @@ scatter(fig[2, 2], 1:3; kwargs..., color = [10, 20, 30], colormap = :plasma)
 fig
 ```
 
-<img src="./1d4009a.png" width="600px" height="450px"/>
+<img src="./790083f.png" width="600px" height="450px"/>
 
 
 ### colormap {#colormap}
@@ -448,7 +448,7 @@ fig
 Defaults to `@inherit colormap :viridis`
 
 Sets the colormap that is sampled for numeric `color`s. `PlotUtils.cgrad(...)`, `Makie.Reverse(any_colormap)` can be used as well, or any symbol from ColorBrewer or PlotUtils. To see all available color gradients, you can call `Makie.available_gradients()`.
-<a id="example-1bd2332" />
+<a id="example-6d265fd" />
 
 
 ```julia
@@ -462,7 +462,7 @@ scatter(fig[2, 2], 1:5; kwargs..., color = 1:5, colormap = [:tomato, :slategray2
 fig
 ```
 
-<img src="./1bd2332.png" width="600px" height="450px"/>
+<img src="./6d265fd.png" width="600px" height="450px"/>
 
 
 ### colorrange {#colorrange}
@@ -572,7 +572,7 @@ Sets the scatter marker.
 Defaults to `Vec3f(0)`
 
 The offset of the marker from the given position in `markerspace` units. An offset of 0 corresponds to a centered marker.
-<a id="example-2435b08" />
+<a id="example-7ff5b1f" />
 
 
 ```julia
@@ -587,7 +587,7 @@ scatter(fig[1, 2], [Point3f(0) for _ in 1:7]; marker = :ltriangle, markersize = 
 fig
 ```
 
-<img src="./2435b08.png" width="600px" height="450px"/>
+<img src="./7ff5b1f.png" width="600px" height="450px"/>
 
 
 ### markersize {#markersize}
@@ -595,7 +595,7 @@ fig
 Defaults to `@inherit markersize`
 
 Sets the size of the marker by scaling it relative to its base size which can differ for each marker. A `Real` scales x and y dimensions by the same amount. A `Vec` or `Tuple` with two elements scales x and y separately. An array of either scales each marker separately. Humans perceive the area of a marker as its size which grows quadratically with `markersize`, so multiplying `markersize` by 2 results in a marker that is 4 times as large, visually.
-<a id="example-fb93218" />
+<a id="example-5768dcd" />
 
 
 ```julia
@@ -609,7 +609,7 @@ scatter(fig[2, 2], 1:3; kwargs..., markersize = [(10, 20), (20, 30), (40, 30)])
 fig
 ```
 
-<img src="./fb93218.png" width="600px" height="450px"/>
+<img src="./5768dcd.png" width="600px" height="450px"/>
 
 
 ### markerspace {#markerspace}
@@ -641,7 +641,7 @@ Controls if the plot will draw over other plots. This specifically means ignorin
 Defaults to `Billboard()`
 
 Sets the rotation of the marker. A `Billboard` rotation is always around the depth axis.
-<a id="example-cd1191d" />
+<a id="example-28c9d9b" />
 
 
 ```julia
@@ -654,7 +654,7 @@ scatter(fig[1, 3], 1:3; kwargs..., rotation = deg2rad.([0, 45, 90]))
 fig
 ```
 
-<img src="./cd1191d.png" width="600px" height="450px"/>
+<img src="./28c9d9b.png" width="600px" height="450px"/>
 
 
 ### space {#space}
@@ -674,7 +674,7 @@ Adjusts whether the plot is rendered with ssao (screen space ambient occlusion).
 Defaults to `@inherit markerstrokecolor`
 
 Sets the color of the outline around a marker.
-<a id="example-7e444b5" />
+<a id="example-e4a0a8f" />
 
 
 ```julia
@@ -686,7 +686,7 @@ scatter(fig[1, 2], 1:3; kwargs..., strokecolor = [RGBf(1, 0, 0), RGBf(0, 1, 0), 
 fig
 ```
 
-<img src="./7e444b5.png" width="600px" height="450px"/>
+<img src="./e4a0a8f.png" width="600px" height="450px"/>
 
 
 ### strokewidth {#strokewidth}
@@ -694,7 +694,7 @@ fig
 Defaults to `@inherit markerstrokewidth`
 
 Sets the width of the outline around a marker.
-<a id="example-3a52cff" />
+<a id="example-961da92" />
 
 
 ```julia
@@ -706,7 +706,7 @@ scatter(fig[1, 2], 1:3; kwargs..., strokewidth = [0, 3, 6])
 fig
 ```
 
-<img src="./3a52cff.png" width="600px" height="450px"/>
+<img src="./961da92.png" width="600px" height="450px"/>
 
 
 ### transform_marker {#transform_marker}

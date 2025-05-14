@@ -34,7 +34,7 @@ For best performance, use `method=Makie.AggThreads()` and make sure to start jul
 The plot type alias for the `datashader` function is `DataShader`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L633" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L633" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -42,7 +42,7 @@ The plot type alias for the `datashader` function is `DataShader`.
 ## Examples {#Examples}
 
 ### Airports {#Airports}
-<a id="example-6f7a006" />
+<a id="example-c5fa049" />
 
 
 ```julia
@@ -62,13 +62,13 @@ hidedecorations!(ax); hidespines!(ax)
 fig
 ```
 
-<img src="./6f7a006.png" width="720px" height="320px"/>
+<img src="./c5fa049.png" width="720px" height="320px"/>
 
 
 ### Mean aggregation {#Mean-aggregation}
 
 The `AggMean` aggregation type requires `Point3`s where the mean is taken over the z values of all points that fall into the same x/y bin.
-<a id="example-f871f40" />
+<a id="example-5446110" />
 
 
 ```julia
@@ -85,11 +85,11 @@ datashader!(ax2, points_with_z, agg = Makie.AggMean(), operation = identity, bin
 f
 ```
 
-<img src="./f871f40.png" width="600px" height="450px"/>
+<img src="./5446110.png" width="600px" height="450px"/>
 
 
 ### Strange Attractors {#Strange-Attractors}
-<a id="example-ca44313" />
+<a id="example-2b4506b" />
 
 
 ```julia
@@ -146,7 +146,7 @@ colgap!(fig.layout,1)
 fig
 ```
 
-<img src="./ca44313.png" width="1000px" height="1000px"/>
+<img src="./2b4506b.png" width="1000px" height="1000px"/>
 
 
 ### Bigger examples {#Bigger-examples}
@@ -254,7 +254,7 @@ datashader(Dict(:category_a => all_points_a, :category_b => all_points_b))
 
 
 The type of the category doesn&#39;t matter, but will get converted to strings internally, to be displayed nicely in the legend. Categories are currently aggregated in one Canvas per category, and then overlaid with alpha blending.
-<a id="example-d77eaf9" />
+<a id="example-5cace00" />
 
 
 ```julia
@@ -267,7 +267,7 @@ hidedecorations!(ax)
 fig
 ```
 
-<img src="./d77eaf9.png" width="600px" height="450px"/>
+<img src="./5cace00.png" width="600px" height="450px"/>
 
 
 We can also reuse the previous NYC example for a categorical plot:

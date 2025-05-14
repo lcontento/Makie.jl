@@ -17,13 +17,13 @@ Plot a step histogram of `values`.
 The plot type alias for the `stephist` function is `StepHist`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L558" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L558" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-7cd46fa" />
+<a id="example-ce3445a" />
 
 
 ```julia
@@ -38,7 +38,7 @@ stephist(f[2, 2], data, normalization = :pdf)
 f
 ```
 
-<img src="./7cd46fa.png" width="600px" height="450px"/>
+<img src="./ce3445a.png" width="600px" height="450px"/>
 
 
 For more examples, see `hist`.

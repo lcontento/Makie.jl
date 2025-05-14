@@ -17,13 +17,13 @@ Creates a 3D contour plot of the plane spanning x::Vector, y::Vector, z::Matrix,
 The plot type alias for the `contour3d` function is `Contour3d`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L613" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L613" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-3a774d8" />
+<a id="example-90f76b7" />
 
 
 ```julia
@@ -40,11 +40,11 @@ contour3d!(xs, ys, +zs, linewidth=2, color=:red2)
 f
 ```
 
-<img src="./3a774d8.png" width="600px" height="450px"/>
+<img src="./90f76b7.png" width="600px" height="450px"/>
 
 
 Omitting the `xs` and `ys` results in the indices of `zs` being used. We can also set arbitrary contour-levels using `levels`:
-<a id="example-2887641" />
+<a id="example-5e5e2b0" />
 
 
 ```julia
@@ -61,7 +61,7 @@ contour3d!(+zs, levels=  .025:0.05:.475,  linewidth=2, color=:red2)
 f
 ```
 
-<img src="./2887641.png" width="600px" height="450px"/>
+<img src="./5e5e2b0.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

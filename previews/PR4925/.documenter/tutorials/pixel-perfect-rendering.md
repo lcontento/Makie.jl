@@ -6,7 +6,7 @@ Let&#39;s say you have some data in a matrix and want to plot it exactly as it i
 ## `heatmap` and `image` {#heatmap-and-image}
 
 To draw a matrix of values we can use `image` or `heatmap`. With their default setting `image` is interpolated and uses a grayscale colormap while `heatmap` is pixelated and uses a colorful colormap (viridis). They also differ in their placement of cells or &quot;pixels&quot;. In `image` you can set where the plot starts and ends, i.e. you set where the left edge of the left most pixel and the right edge of right most pixel is. (Same for the bottom and top pixels.) In `heatmap` you usually set where the cells centers are, though you can also set the edges by passing `size + 1` x and y values. With the right settings both can be made to look the same:
-<a id="example-7dc11c4" />
+<a id="example-d6ebbb3" />
 
 
 ```julia
@@ -30,13 +30,13 @@ limits!.([a1, a2, a3, a4], -1, 4, -1, 3)
 f
 ```
 
-<img src="./7dc11c4.png" width="600px" height="450px"/>
+<img src="./d6ebbb3.png" width="600px" height="450px"/>
 
 
 ## Full Screen Plot {#Full-Screen-Plot}
 
 Let us consider the case of creating a plain image from some data, without any of the usual Axis decorations. In this case it is not useful to work with `Figure` and `Axis` as they both use up space through padding and layouting. Instead, we use a `Scene` directly. An empty scene of a specific size can be created with
-<a id="example-ff08a25" />
+<a id="example-583397d" />
 
 
 ```julia
@@ -46,11 +46,11 @@ using CairoMakie
 scene = Scene(size = (200, 100), camera = campixel!)
 ```
 
-<img src="./ff08a25.png" width="200px" height="100px"/>
+<img src="./583397d.png" width="200px" height="100px"/>
 
 
 Here we explicitly set `camera = campixel!` so that the scene uses pixel units. More specifically, this sets the bottom left corner of the scene to (0, 0) and the top right corner to `size`. Using those limits we can now draw an `image` (or `heatmap`) plot filling the scene exactly:
-<a id="example-6c1efd0" />
+<a id="example-c548a50" />
 
 
 ```julia
@@ -70,11 +70,11 @@ image!(scene, data, colormap = :viridis, interpolate = false)
 scene
 ```
 
-<img src="./6c1efd0.png" width="200px" height="100px"/>
+<img src="./c548a50.png" width="200px" height="100px"/>
 
 
 If we want to enlarge the image we can simply adjust the size of the scene and the limits of the plot. For `heatmap` we need to be a bit careful though because `0:600` is going to give us 601 values rather than the 201 we need. To fix this we will need to explicitly include the size of each cell as the step of range.
-<a id="example-a743a82" />
+<a id="example-47a8b92" />
 
 
 ```julia
@@ -89,7 +89,7 @@ image!(scene, 0..600, 0..200, data, colormap = :viridis, interpolate = false)
 scene
 ```
 
-<img src="./a743a82.png" width="600px" height="200px"/>
+<img src="./47a8b92.png" width="600px" height="200px"/>
 
 
 Another option is to change `px_per_unit` when saving the scene. Using `Makie.save(filename, scene, px_per_unit = 2)` each &quot;pixel&quot; in the scene is represented by 2 pixels in the saved image. This does not affect the limits of the plot, i.e. in a (200, 100) scene you should use (200, 100) as the limits in your plots. (If you check the images generated here you will see that they have twice the size given to the scene because the documentation renders with `pixel_per_unit = 2`)
@@ -99,7 +99,7 @@ Another option is to change `px_per_unit` when saving the scene. Using `Makie.sa
 #### Camera {#Camera}
 
 While the pixel camera is intuitive to use in this context it is not necessary. If you create a scene without a camera, it will default to a clip space camera. With that the size of coordinates of the scene always range from -1 to 1. That may simplify plotting a bit, as you don&#39;t have to adjust the image limits when adjusting the scene limits:
-<a id="example-d42dc8f" />
+<a id="example-42637fa" />
 
 
 ```julia
@@ -112,7 +112,7 @@ image!(scene, -1..1, -1..1, data, colormap = :viridis, interpolate = false)
 scene
 ```
 
-<img src="./d42dc8f.png" width="600px" height="200px"/>
+<img src="./42637fa.png" width="600px" height="200px"/>
 
 
 Similarly you can also use `camera = cam_relative!` to get 0..1 coordinates.
@@ -120,7 +120,7 @@ Similarly you can also use `camera = cam_relative!` to get 0..1 coordinates.
 #### GLMakie Anti-aliasing {#GLMakie-Anti-aliasing}
 
 GLMakie uses FXAA to smooth out hard edges in the rendered image. That means it will interpolate and/or blur pixels with significant brightness differences. This is something we don&#39;t want here, so we should turn it off:
-<a id="example-1c4f783" />
+<a id="example-7584f56" />
 
 
 ```julia
@@ -133,7 +133,7 @@ image!(scene, -1..1, -1..1, data, colormap = :viridis, interpolate = false, fxaa
 scene
 ```
 
-<img src="./1c4f783.png" width="600px" height="200px"/>
+<img src="./7584f56.png" width="600px" height="200px"/>
 
 
 WGLMakie uses MSAA instead, which samples each pixel at multiple sub-pixels. With a pixel-perfect mapping this will sample the same color multiple times, resulting in the same final color. So in WGLMakie we don&#39;t have this problem.
@@ -143,7 +143,7 @@ WGLMakie uses MSAA instead, which samples each pixel at multiple sub-pixels. Wit
 ### Using LScene {#Using-LScene}
 
 If you want to plot multiple pixel perfect matrices using a `Figure` for layouting is quite useful. We can continue relying on the `Scene` mechanics we used above by using an `LScene`. Here we will need to set the `width` and `height` instead of `size` to let layouting know how much space the LScene needs. `resize_to_layout!()` is also quite useful to fit the Figure to the size of the scenes:
-<a id="example-61f4f05" />
+<a id="example-bb2a54f" />
 
 
 ```julia
@@ -165,7 +165,7 @@ resize_to_layout!(fig)
 fig
 ```
 
-<img src="./61f4f05.png" width="252px" height="133px"/>
+<img src="./bb2a54f.png" width="252px" height="133px"/>
 
 
 To control the white space the figure generates, you can adjust `Figure(figure_padding = ...)` for the outer padding and `rowgap!(fig, ...)` and `colgap!(fig.layout, ...)` for the inner gaps.
@@ -173,7 +173,7 @@ To control the white space the figure generates, you can adjust `Figure(figure_p
 ### Using Axis {#Using-Axis}
 
 If you want to plot to an `Axis` you can effectively just replace `LScene` in the example above:
-<a id="example-7a762b1" />
+<a id="example-d3a6c16" />
 
 
 ```julia
@@ -195,7 +195,7 @@ resize_to_layout!(fig)
 fig
 ```
 
-<img src="./7a762b1.png" width="317px" height="156px"/>
+<img src="./d3a6c16.png" width="317px" height="156px"/>
 
 
 For `image` and `heatmap` the axis will choose limits tightly aligned to the respective plot. Therefore you don&#39;t need to match the x and y values of the plot to the dimensions of the data and Axis. However you may still want to set them for `heatmap` so ticks are not aligned to cell centers. You may also want to turn off the spines (`leftspinevisible = false` etc) as they overlap the edge of the image.

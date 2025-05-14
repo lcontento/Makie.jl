@@ -17,13 +17,13 @@ Plots a [waterfall chart](https://en.wikipedia.org/wiki/Waterfall_chart) to visu
 The plot type alias for the `waterfall` function is `Waterfall`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L562" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L562" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-53de3a0" />
+<a id="example-ad092b7" />
 
 
 ```julia
@@ -33,11 +33,11 @@ y = [6, 4, 2, -8, 3, 5, 1, -2, -3, 7]
 waterfall(y)
 ```
 
-<img src="./53de3a0.png" width="600px" height="450px"/>
+<img src="./ad092b7.png" width="600px" height="450px"/>
 
 
 The direction of the bars might be easier to parse with some visual support.
-<a id="example-7523e46" />
+<a id="example-d3a497e" />
 
 
 ```julia
@@ -47,11 +47,11 @@ y = [6, 4, 2, -8, 3, 5, 1, -2, -3, 7]
 waterfall(y, show_direction=true)
 ```
 
-<img src="./7523e46.png" width="600px" height="450px"/>
+<img src="./d3a497e.png" width="600px" height="450px"/>
 
 
 You can customize the markers that indicate the bar directions.
-<a id="example-a33cbc6" />
+<a id="example-fc697db" />
 
 
 ```julia
@@ -61,11 +61,11 @@ y = [6, 4, 2, -8, 3, 5, 1, -2, -3, 7]
 waterfall(y, show_direction=true, marker_pos=:cross, marker_neg=:hline, direction_color=:gold)
 ```
 
-<img src="./a33cbc6.png" width="600px" height="450px"/>
+<img src="./fc697db.png" width="600px" height="450px"/>
 
 
 If the `dodge` attribute is provided, bars are stacked by `dodge`.
-<a id="example-34a2ef8" />
+<a id="example-9d6de1d" />
 
 
 ```julia
@@ -78,11 +78,11 @@ group = repeat(1:5, outer=2)
 waterfall(x, y, dodge=group, color=colors[group])
 ```
 
-<img src="./34a2ef8.png" width="600px" height="450px"/>
+<img src="./9d6de1d.png" width="600px" height="450px"/>
 
 
 It can be easier to compare final results of different groups if they are shown in the background.
-<a id="example-8bc80e7" />
+<a id="example-e4fcc5d" />
 
 
 ```julia
@@ -95,11 +95,11 @@ group = repeat(1:5, outer=2)
 waterfall(x, y, dodge=group, color=colors[group], show_direction=true, show_final=true)
 ```
 
-<img src="./8bc80e7.png" width="600px" height="450px"/>
+<img src="./e4fcc5d.png" width="600px" height="450px"/>
 
 
 The color of the final bars in the background can be modified.
-<a id="example-8cf05a1" />
+<a id="example-eb65a86" />
 
 
 ```julia
@@ -112,11 +112,11 @@ group = repeat(1:5, outer=2)
 waterfall(x, y, dodge=group, color=colors[group], show_final=true, final_color=(colors[6], 1//3))
 ```
 
-<img src="./8cf05a1.png" width="600px" height="450px"/>
+<img src="./eb65a86.png" width="600px" height="450px"/>
 
 
 You can also specify to stack grouped waterfall plots by `x`.
-<a id="example-ad56143" />
+<a id="example-68b3946" />
 
 
 ```julia
@@ -129,7 +129,7 @@ group = repeat(1:2, inner=5)
 waterfall(x, y, dodge=group, color=colors[group], show_direction=true, stack=:x)
 ```
 
-<img src="./ad56143.png" width="600px" height="450px"/>
+<img src="./68b3946.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

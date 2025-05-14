@@ -25,7 +25,7 @@ Their directions are given by a vector of `directions` or component vectors `u`,
 The plot type alias for the `arrows2d` function is `Arrows2D`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L666" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L666" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -52,7 +52,7 @@ Their directions are given by a vector of `directions` or component vectors `u`,
 The plot type alias for the `arrows3d` function is `Arrows3D`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L668" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L668" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -196,6 +196,34 @@ f
 ```
 
 <img src="./8e3fbff.png" width="500px" height="500px"/>
+
+<a id="example-5316b29" />
+
+
+```julia
+using CairoMakie
+ps = Point2f.(1:5, 0)
+vs = Vec2f.(0, 2 .^ (1:2:10))
+
+fig = Figure()
+
+ax = Axis(fig[1, 1], title = "Always scale, never elongate")
+arrows2d!(ax, ps, vs, shaftlength = 16)
+ax = Axis(fig[2, 1])
+# x and y coordinates are on different scales, so radius (x) and length (y) are too
+arrows3d!(ax, ps, vs, shaftlength = 50,
+    tipradius = 0.1, tiplength = 20, shaftradius = 0.02)
+
+ax = Axis(fig[1, 2], title = "Never scale, always elongate")
+arrows2d!(ax, ps, vs, minshaftlength = 0)
+ax = Axis(fig[2, 2])
+arrows3d!(ax, ps, vs, minshaftlength = 0,
+    markerscale = 1, tiplength = 30)
+
+fig
+```
+
+<img src="./5316b29.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

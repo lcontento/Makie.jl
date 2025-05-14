@@ -8,7 +8,7 @@ While this engine is responsive enough for use in GLMakie, it only supports a su
 ## Using L-strings {#Using-L-strings}
 
 You can pass `LaTeXString` objects to almost any object with text labels. They are constructed using the `L` string macro prefix. The whole string is interpreted as an equation if it doesn&#39;t contain an unescaped `$`.
-<a id="example-6c43bde" />
+<a id="example-c55a5db" />
 
 
 ```julia
@@ -24,11 +24,11 @@ Axis(f[1, 1],
 f
 ```
 
-<img src="./6c43bde.png" width="600px" height="450px"/>
+<img src="./c55a5db.png" width="600px" height="450px"/>
 
 
 You can also mix math-mode and text-mode. For [string interpolation](https://docs.julialang.org/en/v1/manual/strings/#string-interpolation) use `%$`instead of `$`:
-<a id="example-adcee67" />
+<a id="example-16b9974" />
 
 
 ```julia
@@ -40,13 +40,13 @@ Axis(f[1,1], title=L"Some %$(t) and some math: $\frac{2\alpha+1}{y}$")
 f
 ```
 
-<img src="./adcee67.png" width="600px" height="450px"/>
+<img src="./16b9974.png" width="600px" height="450px"/>
 
 
 ## Uniformizing the fonts {#Uniformizing-the-fonts}
 
 We provide a LaTeX theme to easily switch to the LaTeX default fonts for all the text.
-<a id="example-7abac55" />
+<a id="example-d3fa139" />
 
 
 ```julia
@@ -60,5 +60,5 @@ with_theme(theme_latexfonts()) do
 end
 ```
 
-<img src="./7abac55.png" width="600px" height="450px"/>
+<img src="./d3fa139.png" width="600px" height="450px"/>
 

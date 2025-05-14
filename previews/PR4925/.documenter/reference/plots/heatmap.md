@@ -30,7 +30,7 @@ Note that `heatmap` is slower to render than `image` so `image` should be prefer
 The plot type alias for the `heatmap` function is `Heatmap`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L603" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L603" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -40,7 +40,7 @@ The plot type alias for the `heatmap` function is `Heatmap`.
 ### Two vectors and a matrix {#Two-vectors-and-a-matrix}
 
 In this example, `x` and `y` specify the points around which the heatmap cells are placed.
-<a id="example-ce023fd" />
+<a id="example-29c36e9" />
 
 
 ```julia
@@ -59,11 +59,11 @@ scatter!(ax, [(x, y) for x in centers_x for y in centers_y], color=:white, strok
 f
 ```
 
-<img src="./ce023fd.png" width="600px" height="450px"/>
+<img src="./29c36e9.png" width="600px" height="450px"/>
 
 
 The same approach works for irregularly spaced cells. Note how the rectangles are not centered around the points, because the boundaries are between adjacent points like voronoi cells.
-<a id="example-bc0b732" />
+<a id="example-1d2124b" />
 
 
 ```julia
@@ -81,11 +81,11 @@ scatter!(ax, [(x, y) for x in centers_x for y in centers_y], color=:white, strok
 f
 ```
 
-<img src="./bc0b732.png" width="600px" height="450px"/>
+<img src="./1d2124b.png" width="600px" height="450px"/>
 
 
 If we add one more element to `x` and `y`, they now specify the edges of the rectangular cells. Here&#39;s a regular grid:
-<a id="example-b605bf0" />
+<a id="example-11c7a2d" />
 
 
 ```julia
@@ -103,11 +103,11 @@ scatter!(ax, [(x, y) for x in edges_x for y in edges_y], color=:white, strokecol
 f
 ```
 
-<img src="./b605bf0.png" width="600px" height="450px"/>
+<img src="./11c7a2d.png" width="600px" height="450px"/>
 
 
 We can do the same with an irregular grid as well:
-<a id="example-936c807" />
+<a id="example-ea018db" />
 
 
 ```julia
@@ -124,13 +124,13 @@ scatter!(ax, [(x, y) for x in borders_x for y in borders_y], color=:white, strok
 f
 ```
 
-<img src="./936c807.png" width="600px" height="450px"/>
+<img src="./ea018db.png" width="600px" height="450px"/>
 
 
 ### Using a `Function` instead of a `Matrix` {#Using-a-Function-instead-of-a-Matrix}
 
 When using a `Function` of the form `(i, j) -> v` as the `values` argument, it is evaluated over the grid spanned by `x` and `y`.
-<a id="example-4597838" />
+<a id="example-601a4cd" />
 
 
 ```julia
@@ -144,13 +144,13 @@ heatmap(-2:0.001:1, -1.1:0.001:1.1, mandelbrot,
     colormap = Reverse(:deep))
 ```
 
-<img src="./4597838.png" width="600px" height="450px"/>
+<img src="./601a4cd.png" width="600px" height="450px"/>
 
 
 ### Three vectors {#Three-vectors}
 
 There must be no duplicate combinations of x and y, but it is allowed to leave out values.
-<a id="example-87dcd52" />
+<a id="example-e8f1b95" />
 
 
 ```julia
@@ -162,13 +162,13 @@ zs = [1, 2, 3, 4, 5, 6, 7, 8, NaN]
 heatmap(xs, ys, zs)
 ```
 
-<img src="./87dcd52.png" width="600px" height="450px"/>
+<img src="./e8f1b95.png" width="600px" height="450px"/>
 
 
 ### Colorbar for single heatmap {#Colorbar-for-single-heatmap}
 
 To get a scale for what the colors represent, add a colorbar. The colorbar is placed within the figure in the first argument, and the scale and colormap can be conveniently set by passing the relevant heatmap to it.
-<a id="example-32e906c" />
+<a id="example-8ea8c9e" />
 
 
 ```julia
@@ -183,7 +183,7 @@ Colorbar(fig[:, end+1], hm)
 fig
 ```
 
-<img src="./32e906c.png" width="600px" height="450px"/>
+<img src="./8ea8c9e.png" width="600px" height="450px"/>
 
 
 ### Colorbar for multiple heatmaps {#Colorbar-for-multiple-heatmaps}
@@ -191,7 +191,7 @@ fig
 When there are several heatmaps in a single figure, it can be useful to have a single colorbar represent all of them. It is important to then have synchronized scales and colormaps for the heatmaps and colorbar. This is done by setting the colorrange explicitly, so that it is independent of the data shown by that particular heatmap.
 
 Since the heatmaps in the example below have the same colorrange and colormap, any of them can be passed to `Colorbar` to give the colorbar the same attributes. Alternatively, the colorbar attributes can be set explicitly.
-<a id="example-cc1334b" />
+<a id="example-22a88fd" />
 
 
 ```julia
@@ -213,13 +213,13 @@ Colorbar(fig[:, end+1], colorrange = joint_limits)  # equivalent
 fig
 ```
 
-<img src="./cc1334b.png" width="600px" height="450px"/>
+<img src="./22a88fd.png" width="600px" height="450px"/>
 
 
 ### Using a custom colorscale {#Using-a-custom-colorscale}
 
 One can define a custom (color)scale using the `ReversibleScale` type. When the transformation is simple enough (`log`, `sqrt`, ...), the inverse transform is automatically deduced.
-<a id="example-4f65b31" />
+<a id="example-ab261f5" />
 
 
 ```julia
@@ -235,7 +235,7 @@ Colorbar(fig[1, 2], hm)
 fig
 ```
 
-<img src="./4f65b31.png" width="600px" height="450px"/>
+<img src="./ab261f5.png" width="600px" height="450px"/>
 
 
 ## Plotting large Heatmaps {#Plotting-large-Heatmaps}

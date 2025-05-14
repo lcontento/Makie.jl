@@ -290,7 +290,7 @@ end
 
 
 Finally, let&#39;s try it out and plot some stocks:
-<a id="example-cdc3902" />
+<a id="example-2703605" />
 
 
 ```julia
@@ -319,7 +319,7 @@ stockchart(f[2, 1], timestamps, stockvalues,
 f
 ```
 
-<img src="./cdc3902.png" width="600px" height="450px"/>
+<img src="./2703605.png" width="600px" height="450px"/>
 
 
 As a last example, lets pretend our stock data is coming in dynamically, and we want to create an animation out of it. This is easy if we use observables as input arguments which we then update frame by frame:

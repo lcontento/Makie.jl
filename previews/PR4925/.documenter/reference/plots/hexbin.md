@@ -17,7 +17,7 @@ Plots a heatmap with hexagonal bins for the observations `xs` and `ys`.
 The plot type alias for the `hexbin` function is `Hexbin`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L560" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L560" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -27,7 +27,7 @@ The plot type alias for the `hexbin` function is `Hexbin`.
 ### Setting the number of bins {#Setting-the-number-of-bins}
 
 Setting `bins` to an integer sets the number of bins to this value for both x and y. The minimum number of bins in one dimension is 2.
-<a id="example-3ac2bd5" />
+<a id="example-9bd3b10" />
 
 
 ```julia
@@ -50,11 +50,11 @@ end
 f
 ```
 
-<img src="./3ac2bd5.png" width="800px" height="800px"/>
+<img src="./9bd3b10.png" width="800px" height="800px"/>
 
 
 You can also pass a tuple of integers to control x and y separately.
-<a id="example-8a6e729" />
+<a id="example-e62ee3a" />
 
 
 ```julia
@@ -77,7 +77,7 @@ end
 f
 ```
 
-<img src="./8a6e729.png" width="800px" height="800px"/>
+<img src="./e62ee3a.png" width="800px" height="800px"/>
 
 
 ### Setting the size of cells {#Setting-the-size-of-cells}
@@ -85,7 +85,7 @@ f
 You can also control the cell size directly by setting the `cellsize` keyword. In this case, the `bins` setting is ignored.
 
 The height of a hexagon is larger than its width. This is why setting the same size for x and y will result in uneven hexagons.
-<a id="example-e902270" />
+<a id="example-42370b4" />
 
 
 ```julia
@@ -108,11 +108,11 @@ end
 f
 ```
 
-<img src="./e902270.png" width="800px" height="800px"/>
+<img src="./42370b4.png" width="800px" height="800px"/>
 
 
 To get evenly sized hexagons, set the cell size to a single number. This number defines the cell width, the height will be computed as `2 * step_x / sqrt(3)`. Note that the visual appearance of the hexagons will only be even if the x and y axis have the same scaling, which is why we use `aspect = DataAspect()` in these examples.
-<a id="example-fb8d2ea" />
+<a id="example-54ad491" />
 
 
 ```julia
@@ -135,13 +135,13 @@ end
 f
 ```
 
-<img src="./fb8d2ea.png" width="800px" height="800px"/>
+<img src="./54ad491.png" width="800px" height="800px"/>
 
 
 ### Hiding hexagons with low counts {#Hiding-hexagons-with-low-counts}
 
 All hexagons with a count lower than `threshold` will be removed:
-<a id="example-eea9e43" />
+<a id="example-52604fd" />
 
 
 ```julia
@@ -161,13 +161,13 @@ end
 f
 ```
 
-<img src="./eea9e43.png" width="800px" height="800px"/>
+<img src="./52604fd.png" width="800px" height="800px"/>
 
 
 ### Changing the scale of the number of observations in a bin {#Changing-the-scale-of-the-number-of-observations-in-a-bin}
 
 You can pass a scale function to via the `colorscale` keyword, which will be applied to the bin counts before plotting.
-<a id="example-308be0b" />
+<a id="example-89ab3ed" />
 
 
 ```julia
@@ -186,13 +186,13 @@ hexbin(f[1, 2], x, y, bins = 40, colorscale=log10,
 f
 ```
 
-<img src="./308be0b.png" width="600px" height="450px"/>
+<img src="./89ab3ed.png" width="600px" height="450px"/>
 
 
 ### Showing zero count hexagons {#Showing-zero-count-hexagons}
 
 By setting `threshold = 0`, all hexagons that fit into the limits of the input data are shown. In this example, we add a transparent color to the start of the colormap and stroke each hexagon so the empty hexagons are visible but not too distracting.
-<a id="example-7afc5c4" />
+<a id="example-d431c07" />
 
 
 ```julia
@@ -220,11 +220,11 @@ Colorbar(f[1, 2], hb,
 f
 ```
 
-<img src="./7afc5c4.png" width="600px" height="450px"/>
+<img src="./d431c07.png" width="600px" height="450px"/>
 
 
 ### Applying weights to observations {#Applying-weights-to-observations}
-<a id="example-cdc9763" />
+<a id="example-26ee647" />
 
 
 ```julia
@@ -251,7 +251,7 @@ end
 f
 ```
 
-<img src="./cdc9763.png" width="800px" height="800px"/>
+<img src="./26ee647.png" width="800px" height="800px"/>
 
 
 ## Attributes {#Attributes}

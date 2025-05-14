@@ -23,13 +23,13 @@ Draw a violin plot.
 The plot type alias for the `violin` function is `Violin`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L608" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L608" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-b928989" />
+<a id="example-14de040" />
 
 
 ```julia
@@ -40,9 +40,9 @@ values = randn(1000)
 violin(categories, values)
 ```
 
-<img src="./b928989.png" width="600px" height="450px"/>
+<img src="./14de040.png" width="600px" height="450px"/>
 
-<a id="example-106db86" />
+<a id="example-6c395e0" />
 
 
 ```julia
@@ -59,9 +59,9 @@ end
 fig
 ```
 
-<img src="./106db86.png" width="600px" height="450px"/>
+<img src="./6c395e0.png" width="600px" height="450px"/>
 
-<a id="example-e38d630" />
+<a id="example-3f6d26f" />
 
 
 ```julia
@@ -74,9 +74,9 @@ end
 violin(categories, values, datalimits = extrema)
 ```
 
-<img src="./e38d630.png" width="600px" height="450px"/>
+<img src="./3f6d26f.png" width="600px" height="450px"/>
 
-<a id="example-f3de9c5" />
+<a id="example-5a270d1" />
 
 
 ```julia
@@ -93,9 +93,9 @@ end
 violin(categories, values, dodge = dodge, side = side, color = color)
 ```
 
-<img src="./f3de9c5.png" width="600px" height="450px"/>
+<img src="./5a270d1.png" width="600px" height="450px"/>
 
-<a id="example-73d2663" />
+<a id="example-cf8830a" />
 
 
 ```julia
@@ -114,11 +114,11 @@ end
 violin(categories, values, side = side, color = color)
 ```
 
-<img src="./73d2663.png" width="600px" height="450px"/>
+<img src="./cf8830a.png" width="600px" height="450px"/>
 
 
 #### Using statistical weights {#Using-statistical-weights}
-<a id="example-90ab59a" />
+<a id="example-ec763af" />
 
 
 ```julia
@@ -139,11 +139,11 @@ violin(fig[1,2], categories, values, weights = w)
 fig
 ```
 
-<img src="./90ab59a.png" width="600px" height="450px"/>
+<img src="./ec763af.png" width="600px" height="450px"/>
 
 
 #### Horizontal axis {#Horizontal-axis}
-<a id="example-899ff7c" />
+<a id="example-e57ff48" />
 
 
 ```julia
@@ -171,7 +171,7 @@ violin!(ax_horiz, categories, values; orientation=:horizontal)
 fig
 ```
 
-<img src="./899ff7c.png" width="600px" height="450px"/>
+<img src="./e57ff48.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

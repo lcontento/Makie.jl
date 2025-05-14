@@ -24,7 +24,7 @@ The first case is used when an image `Matrix` is passed directly as the `color` 
 The second case is used when a `Makie.AbstractPattern` is passed as the `color`. This is typically used for hatching. For example a hatching pattern with diagonal lines can be set with `color = Pattern('/')`. More generally, you can define a line pattern with `Makie.LinePattern()` or use an image as a pattern with `Pattern(image)`.
 
 The last case is used when an image is passed with the `matcap` attribute. The image is then interpreted as going from (-1, 1) to (1, 1) so that normals can be mapped to it. The (0,0,1) direction of the normal is facing the camera/viewer.
-<a id="example-a4fc7f4" />
+<a id="example-fe33402" />
 
 
 ```julia
@@ -56,13 +56,13 @@ f
 └ @ MeshIO ~/.julia/packages/MeshIO/jBkmz/src/io/obj.jl:157
 ```
 
-<img src="./a4fc7f4.png" width="600px" height="450px"/>
+<img src="./fe33402.png" width="600px" height="450px"/>
 
 
 ## Cheat Sheet {#Cheat-Sheet}
 
 Here&#39;s a little cheat sheet showing common color specifications:
-<a id="example-8d1e5bb" />
+<a id="example-eb898a4" />
 
 
 ```julia
@@ -130,7 +130,7 @@ with_theme(theme) do
 end
 ```
 
-<img src="./8d1e5bb.png" width="800px" height="1200px"/>
+<img src="./eb898a4.png" width="800px" height="1200px"/>
 
 
 ## Named colors {#Named-colors}
@@ -142,7 +142,7 @@ Named colors in Makie.jl (e.g., `:blue`) are parsed using [Colors.jl](https://ju
 Makie&#39;s default categorical color palette used for cycling is a reordered version of the one presented in [Wong (2011)](https://www.nature.com/articles/nmeth.1618?WT.ec_id=NMETH-201106).
 
 Makie&#39;s default continuous color map is `:viridis` which is a perceptually uniform colormap originally developed for matplotlib.
-<a id="example-347e0a3" />
+<a id="example-8d91727" />
 
 
 ```julia
@@ -159,7 +159,7 @@ ylims!(ax, -1, 2)
 f
 ```
 
-<img src="./347e0a3.png" width="600px" height="450px"/>
+<img src="./8d91727.png" width="600px" height="450px"/>
 
 
 The following is a list of all the colormaps accessible via a `Symbol` in Makie which are defined in ColorSchemes.jl:

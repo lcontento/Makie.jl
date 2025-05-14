@@ -27,13 +27,13 @@ Plots polygons, which are defined by `coordinates` (the coordinates of the verti
 The plot type alias for the `poly` function is `Poly`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L621" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L621" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-c70c3b4" />
+<a id="example-2041f64" />
 
 
 ```julia
@@ -49,9 +49,9 @@ poly!(Point2f[(0, 0), (2, 0), (3, 1), (1, 1)], color = :red, strokecolor = :blac
 f
 ```
 
-<img src="./c70c3b4.png" width="600px" height="450px"/>
+<img src="./2041f64.png" width="600px" height="450px"/>
 
-<a id="example-c364ad8" />
+<a id="example-2703e36" />
 
 
 ```julia
@@ -73,9 +73,9 @@ poly!(p, color = :blue)
 f
 ```
 
-<img src="./c364ad8.png" width="600px" height="450px"/>
+<img src="./2703e36.png" width="600px" height="450px"/>
 
-<a id="example-4002cb7" />
+<a id="example-99383fe" />
 
 
 ```julia
@@ -96,9 +96,9 @@ poly!(
 f
 ```
 
-<img src="./4002cb7.png" width="600px" height="450px"/>
+<img src="./99383fe.png" width="600px" height="450px"/>
 
-<a id="example-1c453e1" />
+<a id="example-7565e2b" />
 
 
 ```julia
@@ -115,9 +115,9 @@ poly!(Circle(Point2f(0, 0), 15f0), color = :pink)
 f
 ```
 
-<img src="./1c453e1.png" width="600px" height="450px"/>
+<img src="./7565e2b.png" width="600px" height="450px"/>
 
-<a id="example-ddd1c78" />
+<a id="example-370916c" />
 
 
 ```julia
@@ -137,9 +137,9 @@ poly!(ps, color = rand(RGBf, length(ps)))
 f
 ```
 
-<img src="./ddd1c78.png" width="600px" height="450px"/>
+<img src="./370916c.png" width="600px" height="450px"/>
 
-<a id="example-a6d52e6" />
+<a id="example-a6ac627" />
 
 
 ```julia
@@ -162,7 +162,7 @@ poly!(
 f
 ```
 
-<img src="./a6d52e6.png" width="600px" height="450px"/>
+<img src="./a6ac627.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}

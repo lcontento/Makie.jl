@@ -6,7 +6,7 @@ Every plot and every scene contains a `Transformation` object which holds a `tra
 ## Model Transformations {#Model-Transformations}
 
 The `model` matrix is composed of a translation, scaling and rotation, with the rotation acting first and the translation acting last. The translation is set by `translate!()`, the scaling by `scale!()` and the rotation by `rotate!()`. Furthermore you can change the origin used for scaling and rotating with `origin!()`.
-<a id="example-9cc9ecb" />
+<a id="example-f8761ec" />
 
 
 ```julia
@@ -33,7 +33,7 @@ translate!(p2, -0.5, 0.5)    # translate 0.5 left, 0.5 up
 f
 ```
 
-<img src="./9cc9ecb.png" width="500px" height="450px"/>
+<img src="./f8761ec.png" width="500px" height="450px"/>
 
 
 By default, calling these functions will overwrite the value set by a previous invocation. So if you call `translate!(plot, 1,0,0); translate!(plot, 0,1,0)` the translation will be `(0,1,0)`. To accumulate transformation you need to add `Accum` as the first argument, e.g. `translate!(Accum, plot, 0,1,0)`.
@@ -82,7 +82,7 @@ Inheritance can be explicitly controlled with a couple of Symbols. For all of th
   
 
 The `transformation` attribute also accepts inputs to the `transform!()` function. This allows you to prepare a plot with an initial model transformation. You can pass `scale`, `rotation` and/or `translation` as part of a NamedTuple, Dict or Attributes, or rotate and translate the xy plane to another plane with `(plane, shift)`. For example:
-<a id="example-492d493" />
+<a id="example-9fc233f" />
 
 
 ```julia
@@ -101,7 +101,7 @@ heatmap!(a, rand(4,4), transformation = (:yz, 0.5))
 f
 ```
 
-<img src="./492d493.png" width="600px" height="450px"/>
+<img src="./9fc233f.png" width="600px" height="450px"/>
 
 
 Finally you can also construct a `Transformation` object yourself and pass it through the `transformation` attribute.
@@ -113,7 +113,7 @@ As eluded to in the transformation function section there are some cases where c
 If you want to fully detach a plot from its parents transformations, you can create it with `transformation = Transformation()`. If you want to remove only the `transform_func` but not model transformations, you can use `transformation = Transformation(parent, transform_func = identity)`. You can also pass different starting values for `translation`, `scale` and `rotation` to these functions. This will not affect whether the parents model transformations are considered.
 
 As an example, here are two arms on a cart raising a box with a rope.
-<a id="example-a237491" />
+<a id="example-fe0cd6b" />
 
 
 ```julia
@@ -185,5 +185,5 @@ set_close_to!(sl4, 0.5) # raise crate
 f
 ```
 
-<img src="./a237491.png" width="600px" height="400px"/>
+<img src="./fe0cd6b.png" width="600px" height="400px"/>
 

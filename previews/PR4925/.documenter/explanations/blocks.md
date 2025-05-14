@@ -12,7 +12,7 @@ A layout only controls an object&#39;s position or bounding box. A `Block` can b
 ## Adding to a `Figure` {#Adding-to-a-Figure}
 
 Here&#39;s one way to add a `Block`, in this case an `Axis`, to a Figure.
-<a id="example-2d373b9" />
+<a id="example-86427eb" />
 
 
 ```julia
@@ -22,7 +22,7 @@ ax = Axis(f[1, 1])
 f
 ```
 
-<img src="./2d373b9.png" width="600px" height="450px"/>
+<img src="./86427eb.png" width="600px" height="450px"/>
 
 
 ## Specifying a boundingbox directly {#Specifying-a-boundingbox-directly}
@@ -30,7 +30,7 @@ f
 Sometimes you just want to place a `Block` in a specific location, without it being controlled by a dynamic layout. You can do this by setting the `bbox` parameter, which is usually controlled by the layout, manually. The boundingbox should be a 2D `Rect`, and can also be an Observable if you plan to change it dynamically. The function `BBox` creates an `Rect2f`, but instead of passing origin and widths, you pass left, right, bottom and top boundaries directly.
 
 Here&#39;s an example where two axes are placed manually:
-<a id="example-e093075" />
+<a id="example-4987f67" />
 
 
 ```julia
@@ -41,7 +41,7 @@ Axis(f, bbox = BBox(250, 550, 100, 350), title = "Axis 2")
 f
 ```
 
-<img src="./e093075.png" width="600px" height="450px"/>
+<img src="./4987f67.png" width="600px" height="450px"/>
 
 
 ## Deleting blocks {#Deleting-blocks}

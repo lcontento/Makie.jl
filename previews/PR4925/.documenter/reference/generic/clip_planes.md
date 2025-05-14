@@ -4,7 +4,7 @@
 A clip plane is a plane which separates space into two sections, one which is drawn and one which is not. Makie allows you to specify up to 8 clip planes on the scene or plot level. These clip planes are given in world space, meaning they interact with a plot object after the `transform_func` (e.g. `log` scaling) and the `model` matrix (i.e. `translate!(plot, ...)`, `rotate!(plot, ...)` and `scale!(plot, ...)`) have been applied. They do not interact with a plot if `plot.space[] in (:pixel, :relative, :clip)`.
 
 ## Examples {#Examples}
-<a id="example-6a9119f" />
+<a id="example-c127667" />
 
 
 ```julia
@@ -45,5 +45,5 @@ mesh!(a, sphere, color = :orange, backlight = 1)
 f
 ```
 
-<img src="./6a9119f.png" width="900px" height="350px"/>
+<img src="./c127667.png" width="900px" height="350px"/>
 

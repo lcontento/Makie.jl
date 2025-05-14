@@ -27,13 +27,13 @@ Plot a violin (/histogram), boxplot and individual data points with appropriate 
 The plot type alias for the `rainclouds` function is `RainClouds`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L608" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L608" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 &quot;Raincloud&quot; plots are a combination of a (half) violin plot, box plot and scatter plots. The three together can make an appealing and informative visual, particularly for large N datasets.
-<a id="example-abfde83" />
+<a id="example-51319c7" />
 
 
 ```julia
@@ -100,9 +100,9 @@ rainclouds(category_labels, data_array;
     color = colors[indexin(category_labels, unique(category_labels))])
 ```
 
-<img src="./abfde83.png" width="600px" height="450px"/>
+<img src="./51319c7.png" width="600px" height="450px"/>
 
-<a id="example-4a7aeb3" />
+<a id="example-ae259a3" />
 
 
 ```julia
@@ -114,9 +114,9 @@ rainclouds(category_labels, data_array;
     color = colors[indexin(category_labels, unique(category_labels))])
 ```
 
-<img src="./4a7aeb3.png" width="600px" height="450px"/>
+<img src="./ae259a3.png" width="600px" height="450px"/>
 
-<a id="example-ba270a5" />
+<a id="example-136678b" />
 
 
 ```julia
@@ -130,9 +130,9 @@ rainclouds(category_labels, data_array;
     color = colors[indexin(category_labels, unique(category_labels))])
 ```
 
-<img src="./ba270a5.png" width="600px" height="450px"/>
+<img src="./136678b.png" width="600px" height="450px"/>
 
-<a id="example-1678352" />
+<a id="example-6fa2ff6" />
 
 
 ```julia
@@ -146,9 +146,9 @@ rainclouds(category_labels, data_array;
     violin_limits = extrema, color = colors[indexin(category_labels, unique(category_labels))])
 ```
 
-<img src="./1678352.png" width="600px" height="450px"/>
+<img src="./6fa2ff6.png" width="600px" height="450px"/>
 
-<a id="example-ccf96fa" />
+<a id="example-261043e" />
 
 
 ```julia
@@ -162,9 +162,9 @@ rainclouds(category_labels, data_array;
     color = colors[indexin(category_labels, unique(category_labels))])
 ```
 
-<img src="./ccf96fa.png" width="600px" height="450px"/>
+<img src="./261043e.png" width="600px" height="450px"/>
 
-<a id="example-1ec8207" />
+<a id="example-827db74" />
 
 
 ```julia
@@ -180,9 +180,9 @@ rainclouds(more_category_labels, more_data_array;
     color = colors[indexin(more_category_labels, unique(more_category_labels))])
 ```
 
-<img src="./1ec8207.png" width="600px" height="450px"/>
+<img src="./827db74.png" width="600px" height="450px"/>
 
-<a id="example-d3627f3" />
+<a id="example-2c9582b" />
 
 
 ```julia
@@ -197,11 +197,11 @@ rainclouds(category_labels, data_array;
     color = colors[indexin(category_labels, unique(category_labels))])
 ```
 
-<img src="./d3627f3.png" width="600px" height="450px"/>
+<img src="./2c9582b.png" width="600px" height="450px"/>
 
 
 4 of these, between 3 distributions Left and Right example With and Without Box Plot
-<a id="example-268128c" />
+<a id="example-7fa3f36" />
 
 
 ```julia
@@ -269,7 +269,7 @@ supertitle = Label(fig[0, :], "Cloud Plot Testing (Scatter, Violin, Boxplot)", f
 fig
 ```
 
-<img src="./268128c.png" width="1600px" height="3000px"/>
+<img src="./7fa3f36.png" width="1600px" height="3000px"/>
 
 
 ## Attributes {#Attributes}

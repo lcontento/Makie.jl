@@ -17,13 +17,13 @@ Plots a barplot.
 The plot type alias for the `barplot` function is `BarPlot`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/e6a5e55564df9273e47ff7d9aa26ba43ce241dbc/MakieCore/src/recipes.jl#L520-L635" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L635" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
 
 ## Examples {#Examples}
-<a id="example-8971b6a" />
+<a id="example-e531fc7" />
 
 
 ```julia
@@ -40,9 +40,9 @@ barplot!(xs, ys .- 1, fillto = -1, color = xs, strokecolor = :black, strokewidth
 f
 ```
 
-<img src="./8971b6a.png" width="600px" height="450px"/>
+<img src="./e531fc7.png" width="600px" height="450px"/>
 
-<a id="example-48b1363" />
+<a id="example-9f4653e" />
 
 
 ```julia
@@ -53,9 +53,9 @@ ys = 0.5 .* sin.(xs)
 barplot(xs, ys, gap = 0, color = :gray85, strokecolor = :black, strokewidth = 1)
 ```
 
-<img src="./48b1363.png" width="600px" height="450px"/>
+<img src="./9f4653e.png" width="600px" height="450px"/>
 
-<a id="example-852d8e9" />
+<a id="example-e0ee3c7" />
 
 
 ```julia
@@ -75,9 +75,9 @@ barplot(tbl.cat, tbl.height,
         )
 ```
 
-<img src="./852d8e9.png" width="600px" height="450px"/>
+<img src="./e0ee3c7.png" width="600px" height="450px"/>
 
-<a id="example-b5a227f" />
+<a id="example-16b756a" />
 
 
 ```julia
@@ -89,9 +89,9 @@ barplot(tbl.cat, tbl.height,
         )
 ```
 
-<img src="./b5a227f.png" width="600px" height="450px"/>
+<img src="./16b756a.png" width="600px" height="450px"/>
 
-<a id="example-75a3ddf" />
+<a id="example-d164529" />
 
 
 ```julia
@@ -104,9 +104,9 @@ barplot(tbl.cat, tbl.height,
         )
 ```
 
-<img src="./75a3ddf.png" width="600px" height="450px"/>
+<img src="./d164529.png" width="600px" height="450px"/>
 
-<a id="example-33249b5" />
+<a id="example-89ba0aa" />
 
 
 ```julia
@@ -132,9 +132,9 @@ Legend(fig[1,2], elements, labels, title)
 fig
 ```
 
-<img src="./33249b5.png" width="600px" height="450px"/>
+<img src="./89ba0aa.png" width="600px" height="450px"/>
 
-<a id="example-f744806" />
+<a id="example-530250a" />
 
 
 ```julia
@@ -153,9 +153,9 @@ barplot(
 )
 ```
 
-<img src="./f744806.png" width="600px" height="450px"/>
+<img src="./530250a.png" width="600px" height="450px"/>
 
-<a id="example-cac1ae8" />
+<a id="example-2bd7486" />
 
 
 ```julia
@@ -171,9 +171,9 @@ barplot([-1, -0.5, 0.5, 1],
 )
 ```
 
-<img src="./cac1ae8.png" width="600px" height="450px"/>
+<img src="./2bd7486.png" width="600px" height="450px"/>
 
-<a id="example-a116089" />
+<a id="example-fcd7f67" />
 
 
 ```julia
@@ -217,7 +217,7 @@ Legend(fig[1,1], ax, "Jobs", orientation=:horizontal, tellwidth = false, tellhei
 fig
 ```
 
-<img src="./a116089.png" width="600px" height="450px"/>
+<img src="./fcd7f67.png" width="600px" height="450px"/>
 
 
 ## Attributes {#Attributes}
