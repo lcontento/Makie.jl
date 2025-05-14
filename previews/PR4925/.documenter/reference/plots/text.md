@@ -19,7 +19,7 @@ Plots one or multiple texts passed via the `text` keyword. `Text` uses the `Poin
 The plot type alias for the `text` function is `Text`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/f5fbbfb4328fb1bb82ddf663ef4cba4b04da2f84/MakieCore/src/recipes.jl#L520-L616" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

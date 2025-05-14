@@ -18,7 +18,7 @@ Creates a tooltip pointing at `position` displaying the given `string
 The plot type alias for the `tooltip` function is `Tooltip`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/ed5c32afa1cb61b4252cfedd843dc69568f104e0/MakieCore/src/recipes.jl#L520-L600" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/MakieOrg/Makie.jl/blob/f5fbbfb4328fb1bb82ddf663ef4cba4b04da2f84/MakieCore/src/recipes.jl#L520-L600" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
